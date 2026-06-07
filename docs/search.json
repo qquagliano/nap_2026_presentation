@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "presentation/presentation.html#follow-along",
+    "href": "presentation/presentation.html#follow-along",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "1.1 Follow Along",
+    "text": "1.1 Follow Along\n\n\n\n\nhttps://qquagliano.github.io/nap_2025_presentation/presentation/presentation.html\n\n\nhttps://is.gd/TI2Sqx"
+  },
+  {
+    "objectID": "presentation/presentation.html#disclosure",
+    "href": "presentation/presentation.html#disclosure",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "1.2 Disclosure",
+    "text": "1.2 Disclosure\n\nI have no disclosures or conflicts-of-interests related to this presentation"
+  },
+  {
+    "objectID": "presentation/presentation.html#learning-objectives",
+    "href": "presentation/presentation.html#learning-objectives",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "1.3 Learning Objectives",
+    "text": "1.3 Learning Objectives\n\nDescribe the general goals of data analysis and statistics in both research and applied settings\nUnderstand the core concepts and vocabulary used in machine learning/AI techniques\nCompare and contrast the use-cases for “classic” statistical models versus those better addressed by machine learning\nSurvey the current state of research with these methods, specifically related to the context of neuropsychological assessment\nCritically evaluate the practicality of using these methods in clinics, as well as the procedural, ethical, and statistical problems associated with the methods"
+  },
+  {
+    "objectID": "presentation/presentation.html#motivation",
+    "href": "presentation/presentation.html#motivation",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "1.4 Motivation",
+    "text": "1.4 Motivation\n\nBorn out of inspiration and frustration; neuropsychology has been credibly accused of “falling behind” (Miller & Barr, 2017; Singh & Germine, 2021)\nPublic and corporate pressure to adopt new and flashy technology, many already see adoption of AI by providers as a goal (Hou et al., 2024)\nOmnipresence of AI- and machine learning-based tools, and proliferation of AI-focused academic research, though not always really meshing with non-AI focused research (Duede et al., 2024)\nReflecting on my own role as both educator and consumer\nSharing my perspective of a cautious/skeptical optimist\n\n\n“Any sufficiently advanced technology is indistinguishable from magic.” - Arthur C. Clark"
+  },
+  {
+    "objectID": "presentation/presentation.html#purpose",
+    "href": "presentation/presentation.html#purpose",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "1.5 Purpose",
+    "text": "1.5 Purpose\n\nToday, I will primarily focus on methods described as machine learning and “AI” and use cases in neuropsychological evaluation, specifically towards prediction of patient cognition from psychological test scores.\nReview some prominent and recent findings from this booming area of research\nNew benefits with these new techniques (which is exciting), but new challenges as well…\nDisclaimer: Some cited articles are pre-prints and have not yet undergone peer-review, please review cited studies before using for decision-making"
+  },
+  {
+    "objectID": "presentation/presentation.html#why-use-data-analysis-and-statistics-in-neuropsych-assessment",
+    "href": "presentation/presentation.html#why-use-data-analysis-and-statistics-in-neuropsych-assessment",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "1.6 Why Use Data Analysis and Statistics in Neuropsych Assessment?",
+    "text": "1.6 Why Use Data Analysis and Statistics in Neuropsych Assessment?\n\nEvidence-based assessment\nBuild rapport, trust, and education in patients\nImprove validity and reliability of tests and results\nPublic and academic perception of neuropsychology as valuable patient service\nRefinement of accuracy of diagnosis in assessment"
+  },
+  {
+    "objectID": "presentation/presentation.html#review-of-inferential-and-frequentist-statistics",
+    "href": "presentation/presentation.html#review-of-inferential-and-frequentist-statistics",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "2.1 Review of Inferential and Frequentist Statistics",
+    "text": "2.1 Review of Inferential and Frequentist Statistics\n\nTechniques such as z-test, t-test, ANOVA, Pearson’s R, OLS linear regression and many others\nResult in p-values, beta coefficients, effect sizes, etc.\nValue comes from estimating probabilities and magnitude of outcomes, resulting from different variables\nMore explainable, tangible results\nHypothetical Example\n\nLinear regression predicting score on MoCA from age, education, gender (see coefficient table below)\n\n\n\n\n\nVariable\nBeta\nP-value\n\n\n\n\nAge\n-0.39\n0.04\n\n\nEducation\n1.94\n0.001\n\n\nGender (Male Dummy Code)\n0.03\n0.39"
+  },
+  {
+    "objectID": "presentation/presentation.html#inferential-stats-in-the-wild",
+    "href": "presentation/presentation.html#inferential-stats-in-the-wild",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "2.2 Inferential Stats in the Wild",
+    "text": "2.2 Inferential Stats in the Wild\n\nEvidence of (convergent/concurrent) validity: correlation of FSIQ between WAIS-IV and WAIS-5 - r = 0.92, statistically significant (Wechsler, 2025, p. 85)\nQuantifying average differences between different types of individuals: WMS-IV LM I comparison between MCI (M = 8.4, SD = 2.7) and matched control group (M = 11.4, SD = 3.0) – t = 4.93, p &lt; 0.01. (Wechsler, 2009, p. 113)\nDeveloping appropriate normative data to compare our patients against and establish relative cognitive ability - examples from (Mitrushina et al., 2005, p. 649):\n\nRooted in meta-analytical techniques\nPredicting trailmaking test score from age -&gt; 26.50094 - 0.2665049age + 0.0069935age (+ additional education correction)"
+  },
+  {
+    "objectID": "presentation/presentation.html#overview-of-machine-learning-ml",
+    "href": "presentation/presentation.html#overview-of-machine-learning-ml",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "2.3 Overview of Machine Learning (ML)",
+    "text": "2.3 Overview of Machine Learning (ML)\n\nInvolves some type of computational “learning” -&gt; model iterates through available data and “trains” in some manner\n\nTrain -&gt; Fit -&gt; Assess -&gt; Repeat\n\nHas existed for a long time, but has scaled up greatly with exponential rise in technology\nCentral goal of improving how accurate we can predict an outcome of interest\n\nPrediction of a continuous outcome -&gt; regression\nPrediction of a categorial outcome -&gt; classification\nInstead of focus on p-values; more focus on Mean Squared Error (MSE), R-squared, etc.\n\nDe-prioritizes giving exact, interpretable values to variables\nIs especially well suited to dealing with MANY different variables at one time\nNumerous techniques in this broad family - e.g. Classification and Regression Trees (CART), Random Forest (RF), Gradient-boosted Models (GBM), etc."
+  },
+  {
+    "objectID": "presentation/presentation.html#example-cart-model",
+    "href": "presentation/presentation.html#example-cart-model",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "2.4 Example: CART Model",
+    "text": "2.4 Example: CART Model\n\n\n\nExample - CART Model (Lavery et al., 2007)\nScreener test (MMSE) score used as a predictor, alongside other cognitive tests, with dementia as outcome\nMMSE scores are given binary splits (by the model) that produce distinct classification odds of dementia"
+  },
+  {
+    "objectID": "presentation/presentation.html#what-about-ai",
+    "href": "presentation/presentation.html#what-about-ai",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "2.5 What About “AI”?",
+    "text": "2.5 What About “AI”?\n\n\n\nArtificial intelligence, as we know it today, is largely a marketing term encompassing extremely powerful and computationally expensive ML models (Toh et al., 2019)\nThere are some literature reviews that have tried to distinguish the terms (Kühl et al., 2022); but underlying mathematical methods are still the same as ML.\nStill focused on stellar prediction via especially large datasets and high computation power\n“Chat” services and note-writing assistance tools are using a framework called a “large language models” (LLMs) and are already finding use in medical settings (Thirunavukarasu et al., 2023).\nLLMs involves predicting appropriate human-like language (outcome) in response to prompts, context, and training data (predictors)."
+  },
+  {
+    "objectID": "presentation/presentation.html#classic-stats-vs.-mlai",
+    "href": "presentation/presentation.html#classic-stats-vs.-mlai",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "2.6 Classic Stats vs. ML/AI",
+    "text": "2.6 Classic Stats vs. ML/AI\n\n\n\n\n\n\n\n\nCriteria\nClassic Inferential Models\nML/AI Models\n\n\n\n\nNumber of “trials”\nFits one set of parameters for predictor/grouping variables (static)\nUses multiple iterations to improve parameters by some strategy or algorithm (dynamic)\n\n\nPrimary focus or goal\nInferring likelihood and magnitude of variable effects on an outcome\nAccurate prediction of outcome, reducing amount of error\n\n\nExplain-ability of results\nReasonably able to interpret variables and the size of their contributions to the outcome\nDepending on the model, can be relatively difficult to understand how individual variables predict outcome\n\n\nDifficulty of computation\nLow technology demand, mostly calculatable by hand\nDepending on the model, extremely taxing, large data and technological demand\n\n\nNumber of variables\nLess variables possible for certain tests (e.g., t-test), even multiple regression models restrict total number\nMany more predictor variables, predictive power often scales with additional relevant data"
+  },
+  {
+    "objectID": "presentation/presentation.html#scoring-tests-with-trained-models",
+    "href": "presentation/presentation.html#scoring-tests-with-trained-models",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "3.1 Scoring Tests with Trained Models",
+    "text": "3.1 Scoring Tests with Trained Models\n\nRey-Osterrieth Complex Figure\n\nDL trained on 20,225 images\n\nCompared to human scoring\n\n(Langer et al., 2024; Park et al., 2023)"
+  },
+  {
+    "objectID": "presentation/presentation.html#behavior-and-cognition",
+    "href": "presentation/presentation.html#behavior-and-cognition",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "3.2 Behavior and Cognition",
+    "text": "3.2 Behavior and Cognition\n\nEye-tracking on ROCFT\n\nML classified executive/memory impairments\n\n(Kim et al., 2024)"
+  },
+  {
+    "objectID": "presentation/presentation.html#visuospatial-prediction",
+    "href": "presentation/presentation.html#visuospatial-prediction",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "3.3 Visuospatial Prediction",
+    "text": "3.3 Visuospatial Prediction\n\nIntersecting Pentagons test\n\n13,777 drawings\n\nOutperforms human scoring\n\nExtracts geometric features\n\n(Tasaki et al., 2023)"
+  },
+  {
+    "objectID": "presentation/presentation.html#diagnostic-classification",
+    "href": "presentation/presentation.html#diagnostic-classification",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "3.4 Diagnostic Classification",
+    "text": "3.4 Diagnostic Classification\n\nMeta-analysis: test ability to classify AD, MCI\n\nImplications for borderline cases\n\n(Battista et al., 2020)"
+  },
+  {
+    "objectID": "presentation/presentation.html#summary-of-research-applications",
+    "href": "presentation/presentation.html#summary-of-research-applications",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "3.5 Summary of Research Applications",
+    "text": "3.5 Summary of Research Applications\n\nML/AI can extract insights from complex test data\nEspecially useful with large, multivariate sets\nMost common in visuospatial testing so far\nCan inform test selection and diagnostic decisions"
+  },
+  {
+    "objectID": "presentation/presentation.html#procedural-challenges",
+    "href": "presentation/presentation.html#procedural-challenges",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "4.1 Procedural Challenges",
+    "text": "4.1 Procedural Challenges\n\nML and “AI” tools may be costly to develop, run, or subscribe to (in the case of commercial software products) and thus, may not be feasible to run on in-clinic hardware or purchase within budget constraints (Crawford, 2021).\nClinicians and psychometrists need effective training in navigating and understanding these models to use and apply them (Hedderich et al., 2021)\nDepending on the setup, it may be necessary to consider how patient data privacy and confidentiality may be at risk when interacting with a model (Chen & Esmaeilzadeh, 2024)"
+  },
+  {
+    "objectID": "presentation/presentation.html#ethical-concerns",
+    "href": "presentation/presentation.html#ethical-concerns",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "4.2 Ethical Concerns",
+    "text": "4.2 Ethical Concerns\n\nThough some healthcare professionals may be excited and have positive feelings towards AI (Catalina et al., 2023), others may be more wary and object to its use and the impact in may have on the workforce and staffing.\nProviders may feel concerned in fully trusting these models in being congruent with their own judgments (Lebovitz et al., 2022), which is especially concerning given the high stakes associated with diagnostic accuracy in neuropsychological evaluations.\nPatient may feel less trust in total or partial reliance in “AI” tools in medical care, compared to diagnostics only performed by providers (Clements et al., 2022)"
+  },
+  {
+    "objectID": "presentation/presentation.html#statistical-pitfalls",
+    "href": "presentation/presentation.html#statistical-pitfalls",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "4.3 Statistical Pitfalls",
+    "text": "4.3 Statistical Pitfalls\n\nUnlike inferential statistical models, some ML and AI models deal with the “black box” problem of not explaining the why of how predictions are made - though work is being done to try to resolve this issue (Poon & Sung, 2021)\nAI may “hallucinate”, i.e., predict results completely incorrect or fundamentally flawed – as it is effectively “guessing” or estimating a correct response (Alkaissi & McFarlane, 2023)\nML and AI are reliant upon their training data and are thus biased towards patterns existing in that data. When confronted with a case unlike those in the training data, the model is liable to be biased towards what it already “knows” (Barocas et al., 2023)"
+  },
+  {
+    "objectID": "presentation/presentation.html#conclusion",
+    "href": "presentation/presentation.html#conclusion",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "5.1 Conclusion",
+    "text": "5.1 Conclusion\n\nAI and machine learning is something to be excited about!… with caveats.\nWhere there are many exciting developments in computational techniques for analysis in neuropsychology, there are still many considerations to balance and consider in applying these ideas\nReturn to why we use statistics and quantitative analysis in practice, does use of these new technologies support and enhance these?:\n\nEvidence-based assessment\n\nBuild rapport, trust, and education in patients\nImprove validity and reliability of tests and results\nPublic and academic perception of neuropsychology as valuable patient service\nRefinement of accuracy of diagnosis in assessment\n\nPsychometrists should be deliberate in building up a sufficient knowledge of these technological advantages to weigh how to implement them in practice"
+  },
+  {
+    "objectID": "presentation/presentation.html#further-topics",
+    "href": "presentation/presentation.html#further-topics",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "5.2 Further Topics",
+    "text": "5.2 Further Topics\n\nIf you’re interested in more topics surrounding the intersection of machine learning and evaluation:\n\nFuermaier & Niesten (2025) – AI used by patients to coach towards successful test feigning in ADHD evaluations, implications toward test security and performance validity\nDevine et al. (2024) - Using advanced models to attempt to better address cultural deficiencies and bias in tests\nHalkiopoulos & Gkintoni (2024) - Application of ML/AI to computerized adaptive testing, more personalized assessment\nEmsley (2023) - When AI fabricates citations and other evidence in support of it’s statements\nAmini et al. (2024) - Prediction of dementia progress via AI analysis of voice recording"
+  },
+  {
+    "objectID": "presentation/presentation.html#additional-resources",
+    "href": "presentation/presentation.html#additional-resources",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "5.3 Additional Resources",
+    "text": "5.3 Additional Resources\nPresentations\n\nSee later today Advances in Neuropsych Assessment of Suspected TBI by Nicole Newman, PhD, CBIS & Juliette Nadershahi, BA, CSP at 1:00pm EST Today!\n\nAcademic Articles\n\nTwo literature review articles dealing with medicine and AI\n\nJiang et al. (2017) - Pre-covid\nAn et al. (2023) - During/post-covid\n\nContact me at Quinton.Quagliano@trinity-health.org for full reference PDFs of any of the articles I cited today!"
+  },
+  {
+    "objectID": "presentation/presentation.html#sec-refs",
+    "href": "presentation/presentation.html#sec-refs",
+    "title": "Machine Learning Advancements and Usage in Neuropsychological Testing and Scoring",
+    "section": "5.4 References",
+    "text": "5.4 References\n\n\nAlkaissi, H., & McFarlane, S. I. (2023). Artificial hallucinations in ChatGPT: Implications in scientific writing. Cureus. https://doi.org/10.7759/cureus.35179\n\n\nAmini, S., Hao, B., Yang, J., Karjadi, C., Kolachalama, V. B., Au, R., & Paschalidis, I. C. (2024). Prediction of alzheimer’s disease progression within 6 years using speech: A novel approach leveraging language models. Alzheimer’s & Dementia, 20(8), 5262–5270. https://doi.org/10.1002/alz.13886\n\n\nAn, Q., Rahman, S., Zhou, J., & Kang, J. J. (2023). A comprehensive review on machine learning in healthcare industry: Classification, restrictions, opportunities and challenges. Sensors, 23(9), 4178. https://doi.org/10.3390/s23094178\n\n\nBarocas, S., Hardt, M., & Narayanan, A. (2023). Fairness and machine learning: Limitations and opportunities. MIT Press. https://fairmlbook.org/\n\n\nBattista, P., Salvatore, C., Berlingeri, M., Cerasa, A., & Castiglioni, I. (2020). Artificial intelligence and neuropsychological measures: The case of alzheimer’s disease. Neuroscience & Biobehavioral Reviews, 114, 211–228. https://doi.org/10.1016/j.neubiorev.2020.04.026\n\n\nCatalina, Q. M., Fuster-Casanovas, A., Vidal-Alaball, J., Escalé-Besa, A., Marin-Gomez, F. X., Femenia, J., & Solé-Casals, J. (2023). Knowledge and perception of primary care healthcare professionals on the use of artificial intelligence as a healthcare tool. Digital Health, 9, 20552076231180511. https://doi.org/10.1177/20552076231180511\n\n\nChen, Y., & Esmaeilzadeh, P. (2024). Generative AI in medical practice: In-depth exploration of privacy and security challenges. Journal of Medical Internet Research, 26, e53008. https://doi.org/10.2196/53008\n\n\nClements, W., Thong, L., Zia, A., Moriarty, H., & Goh, G. (2022). A prospective study assessing patient perception of the use of artificial intelligence in radiology. Asia Pacific Journal of Health Management. https://doi.org/10.24083/apjhm.v17i1.861\n\n\nCrawford, K. (2021). Atlas of AI: Power, politics, and the planetary costs of artificial intelligence. Yale University Press.\n\n\nDevine, S. A., Lee, M., Gurnani, A. S., Sunderaraman, P., Kourtis, L., Pratap, A., Low, S., Ho, K., Gifford, K. A., & Au, R. (2024). Using new science to reduce bias of old science: AI‐driven customization of culturally biased tests. Alzheimer’s & Dementia, 20, e091267. https://doi.org/10.1002/alz.091267\n\n\nDuede, E., Dolan, W., Bauer, A., Foster, I., & Lakhani, K. (2024). Oil & water? Diffusion of AI within and across scientific fields. arXiv. https://doi.org/10.48550/ARXIV.2405.15828\n\n\nEmsley, R. (2023). ChatGPT: These are not hallucinations – they’re fabrications and falsifications. Schizophrenia, 9(1), 52, s41537-023-00379-4. https://doi.org/10.1038/s41537-023-00379-4\n\n\nFuermaier, A. B. M., & Niesten, I. J. M. (2025). ChatGPT helps students feign ADHD: An analogue study on AI-assisted coaching. Psychological Injury and Law, 18(2), 97–107. https://doi.org/10.1007/s12207-025-09538-7\n\n\nHalkiopoulos, C., & Gkintoni, E. (2024). Leveraging AI in e-learning: Personalized learning and adaptive assessment through cognitive neuropsychology—a systematic analysis. Electronics, 13(18), 3762. https://doi.org/10.3390/electronics13183762\n\n\nHedderich, D. M., Keicher, M., Wiestler, B., Gruber, M. J., Burwinkel, H., Hinterwimmer, F., Czempiel, T., Spiro, J. E., Pinto Dos Santos, D., Heim, D., Zimmer, C., Rückert, D., Kirschke, J. S., & Navab, N. (2021). AI for doctors—a course to educate medical professionals in artificial intelligence for medical imaging. Healthcare, 9(10), 1278. https://doi.org/10.3390/healthcare9101278\n\n\nHou, T., Li, M., Tan, Y. (Ricky)., & Zhao, H. (2024). Physician adoption of AI assistant. Manufacturing & Service Operations Management, 26(5), 1639–1655. https://doi.org/10.1287/msom.2023.0093\n\n\nJiang, F., Jiang, Y., Zhi, H., Dong, Y., Li, H., Ma, S., Wang, Y., Dong, Q., Shen, H., & Wang, Y. (2017). Artificial intelligence in healthcare: Past, present and future. Stroke and Vascular Neurology, 2(4), 230–243. https://doi.org/10.1136/svn-2017-000101\n\n\nKim, M., Lee, J., Lee, S. Y., Ha, M., Park, I., Jang, J., Jang, M., Park, S., & Kwon, J. S. (2024). Development of an eye-tracking system based on a deep learning model to assess executive function in patients with mental illnesses. Scientific Reports, 14(1), 18186. https://doi.org/10.1038/s41598-024-68586-2\n\n\nKühl, N., Schemmer, M., Goutier, M., & Satzger, G. (2022). Artificial intelligence and machine learning. Electronic Markets, 32(4), 2235–2244. https://doi.org/10.1007/s12525-022-00598-0\n\n\nLanger, N., Weber, M., Vieira, B. H., Strzelczyk, D., Wolf, L., Pedroni, A., Heitz, J., Müller, S., Schultheiss, C., Tröndle, M., Lasprilla, C. A., Rivera, D., Scarpina, F., Zhao, Q., Leuthold, R., Jenni, O. G., Brugger, P., Zaehle, T., Lorenz, R., & Zhang, C. (2024). The AI neuropsychologist: Automatic scoring of memory deficits with deep learning. Biorxiv. https://doi.org/10.1101/2022.06.15.496291\n\n\nLavery, L. L., Lu, S., Chang, C.-C. H., Saxton, J., & Ganguli, M. (2007). Cognitive assessment of older primary care patients with and without memory complaints. Journal of General Internal Medicine, 22(7), 949–954. https://doi.org/10.1007/s11606-007-0198-0\n\n\nLebovitz, S., Lifshitz-Assaf, H., & Levina, N. (2022). To engage or not to engage with AI for critical judgments: How professionals deal with opacity when using AI for medical diagnosis. Organization Science, 33(1), 126–148. https://doi.org/10.1287/orsc.2021.1549\n\n\nMiller, J. B., & Barr, W. B. (2017). The technology crisis in neuropsychology. Archives of Clinical Neuropsychology, 32(5), 541–554. https://doi.org/10.1093/arclin/acx050\n\n\nMitrushina, M., Boone, K., Razani, J., & D’Elia, L. (2005). Handbook of normative data for neuropsychological assessment (2nd ed). Oxford University Press.\n\n\nPark, J. Y., Seo, E. H., Yoon, H.-J., Won, S., & Lee, K. H. (2023). Automating rey complex figure test scoring using a deep learning-based approach: A potential large-scale screening tool for cognitive decline. Alzheimer’s Research & Therapy, 15(1), 145. https://doi.org/10.1186/s13195-023-01283-w\n\n\nPoon, A. I. F., & Sung, J. J. Y. (2021). Opening the black box of AI‐medicine. Journal of Gastroenterology and Hepatology, 36(3), 581–584. https://doi.org/10.1111/jgh.15384\n\n\nSingh, S., & Germine, L. (2021). Technology meets tradition: A hybrid model for implementing digital tools in neuropsychology. International Review of Psychiatry, 33(4), 382–393. https://doi.org/10.1080/09540261.2020.1835839\n\n\nTasaki, S., Kim, N., Truty, T., Zhang, A., Buchman, A. S., Lamar, M., & Bennett, D. A. (2023). Explainable deep learning approach for extracting cognitive features from hand-drawn images of intersecting pentagons. Npj Digital Medicine, 6(1), 157. https://doi.org/10.1038/s41746-023-00904-w\n\n\nThirunavukarasu, A. J., Ting, D. S. J., Elangovan, K., Gutierrez, L., Tan, T. F., & Ting, D. S. W. (2023). Large language models in medicine. Nature Medicine, 29(8), 1930–1940. https://doi.org/10.1038/s41591-023-02448-8\n\n\nToh, T. S., Dondelinger, F., & Wang, D. (2019). Looking beyond the hype: Applied AI and machine learning in translational medicine. EBioMedicine, 47, 607–615. https://doi.org/10.1016/j.ebiom.2019.08.027\n\n\nWechsler, D. (2009). WMS-IV technical & interperative manual. Pearson Assessments.\n\n\nWechsler, D. (2025). WAIS-5 technical & intepretative manual. Pearson Assessments."
+  }
+]

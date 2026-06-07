@@ -1,0 +1,76 @@
+project:
+  type: website
+  execute-dir: file
+  output-dir: docs
+
+format:
+  # NOTE: RevealJS Slides Light Theme
+  revealjs:
+    theme: ./resources/theme/theme_light.scss
+    css: ./resources/theme/style_light.css
+    pointer:
+      color: blue
+    # NOTE: Graphics and tables
+    mermaid-format: svg
+    fig-format: svg
+    # NOTE: Exec opts
+    execute:
+      echo: false
+      warning: false
+      message: false
+      eval: true
+      output: true
+      cache: false
+      freeze: false
+    # NOTE: Language
+    lang: en-US
+    # NOTE: Numbering and Sectioning
+    slide-level: 2
+    slide-number: true
+    show-slide-number: all
+    number-sections: true
+    number-depth: 2
+    # NOTE: Table-of-contents
+    toc: true
+    toc-depth: 1
+    # NOTE: Rendering
+    keep-md: false
+    keep-ipynb: false
+    embed-resources: true
+    self-contained-math: true
+    output-ext: html
+    # NOTE: Navigation
+    incremental: true
+    navigation-mode: linear
+    scrollable: true
+    transition: slide
+    progress: true
+    touch: true
+    keyboard: true
+    mouse-wheel: false
+    hide-inactive-cursor: true
+    controls: true
+    controls-layout: edges
+    controls-tutorial: true
+    controls-back-arrows: visible
+    help: true
+    # NOTE: Slide Content
+    smaller: false
+    footer: ""
+    preview-links: false
+    link-external-newwindow: true
+    slide-tone: false
+    auto-stretch: false
+    # NOTE: Code
+    code-fold: show
+    code-copy: true
+    code-summary: "R Code"
+    highlight-style: arrow
+    # NOTE: Plugins
+    revealjs-plugins:
+      - verticator
+      - codefocus
+      - pointer
+    # footer-logo-link: "https://www.gvsu.edu/"
+    hide-from-titleSlide: "text"
+
