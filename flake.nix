@@ -1,94 +1,67 @@
 {
-  description = "Quarto, Python, R, & Julia Development Flake";
+  description = "NAP 2026 Conference Presentation Flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/master";
-    nixpkgs_legacy.url = "github:NixOS/nixpkgs/f03c983c83471408ef16fcb9f47078491070064f";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils-plus.url = "github:gytis-ivaskevicius/flake-utils-plus/master";
   };
 
   outputs =
     {
       nixpkgs,
-      nixpkgs_legacy,
       flake-utils-plus,
       ...
     }:
+    # Builds for all possible system architectures
     flake-utils-plus.lib.eachDefaultSystem (
       system:
       let
+        quarto_ver = "1.9.16";
+        # Necessary to call nixpkgs below, do not remove
         pkgs = import nixpkgs {
           inherit system;
-        };
-        pkgs_legacy = import nixpkgs_legacy {
-          inherit system;
-        };
-        python = (
-          pkgs.python3.withPackages (python-pkgs: [
-            python-pkgs.ipython
-            python-pkgs.numpy
-            python-pkgs.pandas
-            python-pkgs.radian
-            python-pkgs.scipy
-            python-pkgs.plotly
-            python-pkgs.jupyter
-          ])
-        );
-        julia = (
-          pkgs.julia-bin.withPackages [
-            "LanguageServer"
-            "DataFrames"
-            "DataFramesMeta"
-          ]
-        );
-        R = pkgs.rWrapper.override {
-          packages = with pkgs.rPackages; [
-            dplyr
-            egg
-            furrr
-            ggplot2
-            kableExtra
-            knitr
-            languageserver
-            magrittr
-            quarto
-            stringr
-            tibble
-            tidyr
-            tidyselect
+          overlays = [
+            (final: prev: {
+              quarto = prev.quarto.overrideAttrs (old: {
+                version = quarto_ver;
+                src = prev.fetchurl {
+                  url = "https://github.com/quarto-dev/quarto-cli/releases/download/v${quarto_ver}/quarto-${quarto_ver}-linux-amd64.tar.gz";
+                  hash = "sha256-Up/4/WTP2MYCNWfIf3Og0TthNYyk1sYPHNNksqKvJU8=";
+                };
+                patches = [
+                ];
+              });
+            })
           ];
         };
-
-        # BUG: Newer version of Tex breaks table coloring
-        # Nix PR must have landed sometime between Mar 1 and May 18, 2025
-        # I suspect: https://github.com/NixOS/nixpkgs/pull/390498
-        # On new TeX, if rendered with Quarto -> breaks
-        # if rendered with plain lualatex -> doesn't break
-
-        auto-multiple-choice = pkgs.auto-multiple-choice;
-        tex = (
-          pkgs.texlive.combine {
-            inherit (pkgs.texlive) scheme-full;
-            inherit auto-multiple-choice;
-          }
-        );
-        auto-multiple-choice_legacy = pkgs_legacy.auto-multiple-choice;
-        tex_legacy = (
-          pkgs_legacy.texlive.combine {
-            inherit (pkgs_legacy.texlive) scheme-full;
-            inherit auto-multiple-choice_legacy;
-          }
-        );
-
-        nativeBuildInputs = with pkgs; [
-          # python
-          # julia
-          # jupyter-all # For jupyter kernel rendering in Quarto
-          mermaid-cli
-          R
+        # Set here so it can be included in both Quarto and R wrappers below
+        R_packages = with pkgs.rPackages; [
+          kableExtra
+          knitr
+          languageserver # For R LSP support in text editors/IDEs
           quarto
+          renv
+        ];
+        # Make R and Quarto with packages above
+        my_R = pkgs.rWrapper.override {
+          packages = R_packages;
+        };
+        my_quarto = pkgs.quarto.override {
+          extraRPackages = R_packages;
+        };
+        # Set up tex
+        my_tex = pkgs.texliveFull;
+        nativeBuildInputs = with pkgs; [
+          # CLI tools
+          bashInteractive # For a basic shell on
+          flake-checker # For ensuring flake is healthy and up-to-date
+          # Custom R and Quarto tools
+          my_R
+          my_quarto
+          # Rendering dependencies
           pandoc
-          tex
+          my_tex
+          liberation_ttf # For FOSS fonts
         ];
       in
       {
@@ -100,8 +73,65 @@
             # bash
             ''
               echo " "
-              echo "----- Initialized Quarto & R Development Environment -----"
+              echo -e "\e[32m----- Initialized Nix Flake Development Environment -----\e[0m"
               echo " "
+
+              out=$(git --no-pager fetch --dry-run 2>&1)
+              if [ -n "$out" ]
+              then    
+              echo -e "\e[31m----- Local git repo is behind Github remote or unreachable, Consider git pulling before further work ----- <<--\e[0m"
+              echo " "
+              while true; do
+              read -p "----- Do you want to git pull? (y/n) ----- " yn
+              case $yn in 
+                [yY] ) 
+                  echo " ";
+                  git pull;
+                  break;;
+                [nN] ) 
+                  echo " ";
+                  echo -e "\e[31m----- WARNING: Editing repo without git pulling ----- <<--\e[0m";
+                  exit;;
+                * ) echo invalid response;;
+              esac
+              done
+              else
+              echo -e "\e[32m----- Local git repo is up to date with Github remote -----\e[0m"
+              fi
+
+              echo -e " "
+              echo -e "\e[32m----- Setting git root directory, .Rprofile and fonts location -----\e[0m"
+              export GIT_ROOT_DIR=$(git rev-parse --show-toplevel)
+              export R_PROFILE_USER="$(echo $GIT_ROOT_DIR)/.Rprofile" 
+              export OSFONTDIR=${pkgs.liberation_ttf}/share/fonts
+
+              if [[ -f $R_PROFILE_USER  &&  -d $GIT_ROOT_DIR/renv ]]; 
+              then
+                echo -e " "
+                echo -e "\e[32m----- .Rprofile and renv directory found -----\e[0m"
+              else
+                echo -e " "
+                echo -e "\e[31m----- Missing .Rprofile and/or renv directory ----- <<--\e[0m"
+              fi
+
+              echo -e " "
+              out="$($(flake-checker --no-telemetry --fail-mode > ./flake_check_results) echo $?)"
+              if [ "$out" = 1 ]
+              then
+              echo -e "\e[31m----- Flake check gives warnings: ----- <<--\e[0m"
+              echo -e " "
+              cat ./flake_check_results
+              rm -rf ./flake_check_results
+              else
+              echo -e "\e[32m----- Flake check gives good status -----\e[0m"
+              rm -rf ./flake_check_results
+              fi
+
+              export LATEXMKRCSYS=$(echo $GIT_ROOT_DIR/.latexmkrc)
+
+              echo -e " "
+              echo -e "\e[32m----- Finished Nix Flake Development Environment Init Process -----\e[0m"
+              echo -e " "
             '';
         };
       }

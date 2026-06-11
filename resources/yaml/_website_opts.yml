@@ -1,0 +1,20 @@
+# NOTE: Paths are relative to project root
+
+website:
+  title: "NAP 2026 Presentation"
+  description: "NAP 2026 Presentation"
+  search: true
+  bread-crumbs: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Index
+  sidebar:
+    search: true
+    style: "docked"
+
+theme:
+  light: ./resources/theme/pres_theme_light.scss
+  dark: ./resources/theme/pres_theme_dark.scss
+
+format-links: false

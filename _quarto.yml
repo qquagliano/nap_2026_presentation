@@ -4,73 +4,94 @@ project:
   output-dir: docs
 
 format:
+  # NOTE: PDF Notes
+  titlepage-pdf:
+    # NOTE: Titlepages opts
+    titlepage: academic
+    titlepage-theme:
+      elements: ["\\headerblock", "\\titleblock", "\\authorblock"]
+      page-align: "center"
+      title-style: "doublelinetight"
+      title-fontstyle: ["huge", "bfseries"]
+      title-fontfamily: "Liberation Sans"
+      title-space-after: "1.5cm"
+      subtitle-fontstyle: "Large"
+      subtitle-fontfamily: "Liberation Sans"
+      author-style: "two-column"
+      affiliation-style: "none"
+      affiliation-fontstyle: "small"
+      affiliation-fontfamily: "Liberation Sans"
+      author-space-after: "1.5cm"
+      author-fontstyle: "small"
+      author-fontfamily: "Liberation Sans"
+      logo-space-after: "2\\baselineskip"
+      logo-size: 250pt
+      header-fontstyle: ["textsc", "LARGE"]
+      header-space-after: "1.5cm"
+      header-fontfamily: "Liberation Sans"
+    # NOTE: PDF opts
+    toc-title: "Table of Contents"
+    toc: true
+    toc-depth: 3
+    lof: false
+    lot: false
+    number-depth: 3
+    number-sections: true
+    keep-tex: false
+    keep-md: false
+    # NOTE: LaTeX opts
+    include-in-header:
+      - file: "./resources/tex/header.tex"
+    include-before-body:
+      - file: "./resources/tex/before_body.tex"
+    include-after-body:
+      - file: "./resources/tex/after_body.tex"
+    template: ./resources/tex/template.tex
+    template-partials:
+      - ./resources/tex/doc-class.tex
+      - ./resources/tex/toc.tex
+    # NOTE: Rendering opts
+    engine: knitr
+    documentclass: article
+    pdf-engine: lualatex
+    geometry: "margin=1in"
+    papersize: letter
+    output-ext: pdf
+    # NOTE: Link opts
+    colorlinks: true
+    linkcolor: mypurple
+    toccolor: black
+    filecolor: mypurple
+    urlcolor: mypurple
+    citecolor: mypurple
+    # NOTE: Font and language opts
+    mainfont: "Liberation Sans"
+    fontsize: 12pt
+    microtypeoptions:
+      - protrusion = true
+      - expansion = true
+    hyperrefoptions:
+      - pdfpagemode=UseOutlines
+    lang: en-US
+    fontenc: T1
+    # NOTE: Code opts
+    highlight-style: a11y
+    # NOTE: Fig and tbl opts
+    fig-align: center
+    cap-location: top
+    fig-cap-location: top
+    tbl-cap-location: top
+    fig-pos: H
+    tbl-pos: H
+    fig-width: 6
+    fig-height: 3
   # NOTE: RevealJS Slides Light Theme
   revealjs:
-    theme: ./resources/theme/theme_light.scss
-    css: ./resources/theme/style_light.css
+    output-file: "presentation_slides"
+    theme: ./resources/theme/pres_theme_light.scss
+    css: ./resources/theme/pres_style_light.css
     pointer:
       color: blue
     # NOTE: Graphics and tables
     mermaid-format: svg
     fig-format: svg
-    # NOTE: Exec opts
-    execute:
-      echo: false
-      warning: false
-      message: false
-      eval: true
-      output: true
-      cache: false
-      freeze: false
-    # NOTE: Language
-    lang: en-US
-    # NOTE: Numbering and Sectioning
-    slide-level: 2
-    slide-number: true
-    show-slide-number: all
-    number-sections: true
-    number-depth: 2
-    # NOTE: Table-of-contents
-    toc: true
-    toc-depth: 1
-    # NOTE: Rendering
-    keep-md: false
-    keep-ipynb: false
-    embed-resources: true
-    self-contained-math: true
-    output-ext: html
-    # NOTE: Navigation
-    incremental: true
-    navigation-mode: linear
-    scrollable: true
-    transition: slide
-    progress: true
-    touch: true
-    keyboard: true
-    mouse-wheel: false
-    hide-inactive-cursor: true
-    controls: true
-    controls-layout: edges
-    controls-tutorial: true
-    controls-back-arrows: visible
-    help: true
-    # NOTE: Slide Content
-    smaller: false
-    footer: ""
-    preview-links: false
-    link-external-newwindow: true
-    slide-tone: false
-    auto-stretch: false
-    # NOTE: Code
-    code-fold: show
-    code-copy: true
-    code-summary: "R Code"
-    highlight-style: arrow
-    # NOTE: Plugins
-    revealjs-plugins:
-      - verticator
-      - codefocus
-      - pointer
-    # footer-logo-link: "https://www.gvsu.edu/"
-    hide-from-titleSlide: "text"
-
