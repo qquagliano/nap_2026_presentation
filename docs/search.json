@@ -1,30 +1,65 @@
 [
   {
-    "objectID": "presentation/presentation_slides.html#follow-along",
-    "href": "presentation/presentation_slides.html#follow-along",
+    "objectID": "presentation/presentation_slides.html#sec-follow-along",
+    "href": "presentation/presentation_slides.html#sec-follow-along",
     "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
-    "section": "Follow Along",
-    "text": "Follow Along\n\nQR Code Goes Here\n\n\nhttps://qquagliano.github.io/nap_2026_presentation/presentation/presentation_slides.html\n\n\nShortened Link Goes Here"
+    "section": "1.1 Follow Along",
+    "text": "1.1 Follow Along\n\nhttp://bit.ly/49UzDFF"
   },
   {
-    "objectID": "presentation/presentation_slides.html#disclosures-disclaimers",
-    "href": "presentation/presentation_slides.html#disclosures-disclaimers",
+    "objectID": "presentation/presentation_slides.html#sec-about-me",
+    "href": "presentation/presentation_slides.html#sec-about-me",
     "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
-    "section": "Disclosures & Disclaimers",
-    "text": "Disclosures & Disclaimers\n\nI have no financial disclosures or conflicts-of-interests related to this presentation\nThis presentation has not been drafted, ideated on, or edited with use of AI or LLMs. Any mistakes made are human error."
+    "section": "1.2 About Me",
+    "text": "1.2 About Me\n\nEducation\n\nB.S. in Psychology (Neuroscience Concentration) from Calvin University\nM.S. in Quantitative Psychology from Ball State University\n\nCurrent Positions\n\nLead Psychometrist at Trinity Health West Michigan Medical Group - Neuropsychology Department\nAdjunct Professor of Psychology at Grand Valley State University\nAdjunct Instructor of Educational Psychology at Ball State University"
   },
   {
-    "objectID": "presentation/presentation_slides.html#learning-objectives",
-    "href": "presentation/presentation_slides.html#learning-objectives",
+    "objectID": "presentation/presentation_slides.html#sec-disclosure",
+    "href": "presentation/presentation_slides.html#sec-disclosure",
     "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives"
+    "section": "1.3 Disclosures & Disclaimers",
+    "text": "1.3 Disclosures & Disclaimers\n\nI have no financial disclosures or conflicts-of-interests related to this presentation\nThis presentation has not been drafted, ideated on, or edited with use of AI or LLMs. Any mistakes made are human error.\nCE credits for viewing this presentation will be provided after the conclusion of the conference and completion of the post-conference survey"
   },
   {
-    "objectID": "presentation/presentation_slides.html#sec-refs",
-    "href": "presentation/presentation_slides.html#sec-refs",
+    "objectID": "presentation/presentation_slides.html#sec-acknowledgments",
+    "href": "presentation/presentation_slides.html#sec-acknowledgments",
     "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
-    "section": "References",
-    "text": "References"
+    "section": "1.4 Acknowledgments",
+    "text": "1.4 Acknowledgments\n\nTo the National Association of Psychometrists (NAP) Conference Planning Committee and all organizers of this conference\nTo my colleagues, Amelia VanderLeest and Blair Shaw\nTo the other presenters, before and after me\nTo you, my audience"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-objs",
+    "href": "presentation/presentation_slides.html#sec-objs",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "1.5 Learning Objectives",
+    "text": "1.5 Learning Objectives\nLearning objectives below have been approved by NAP and the Board of Certified Psychometrists (BCP). These objectives will be met with an emphasis on relevancy to the discipline of psychometry.\n\nLearn the general, basic differences between the frequentist and Bayesian frameworks for statistics\nReview the historical and modern prevalent use of frequentist statistics in neuropsychology and cognitive testing\nAppreciate the various developing applications of Bayesian statistics to neuropsychological evaluation - Consider the practical ramifications in test selection and scoring that come with a Bayesian perspective, along with the possible future directions for this approach\nUnderstand the limitations and ramifications of implementing these methods in a clinic"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-my-pitch",
+    "href": "presentation/presentation_slides.html#sec-my-pitch",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "1.6 My Pitch",
+    "text": "1.6 My Pitch\n\nEmpirical and evidence-driven nurse analogy\n\nWe owe it to our patients and clinics to be well-versed in empirical knowledge, even if not used daily\n\nImproving our stature, variety, and skills\n\nWith an ever-evolving landscape involving digital testing, AI, and new technology, we must be mindful of how we can train ourselves up in new methods, many of which have roots in Bayesian statistics\n\nBecoming skilled in statistics may offer an important avenue to future research and educational opportunities!"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-further-reading",
+    "href": "presentation/presentation_slides.html#sec-further-reading",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "6.1 Further Reading & Resources",
+    "text": "6.1 Further Reading & Resources\n\nBooks\n\nFor a friendly and more basic introduction to the Bayesian Method \\(\\rightarrow\\) A Student’s Guide to Bayesian Statistics (Lambert, 2018)\nFor broad coverage of statistics topics leading up to Bayesian Methods \\(\\rightarrow\\) Statistical Rethinking, 2nd Edition (McElreath, 2020)\nFor more focused applications of Bayesian Methods to psychology \\(\\rightarrow\\) Bayesian Statistics for the Social Sciences, 2nd Edition (Kaplan, 2024)\n\nReview the References of this presentation for scientific articles that show these methods in action!"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-take-home",
+    "href": "presentation/presentation_slides.html#sec-take-home",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "6.2 Take-home Message",
+    "text": "6.2 Take-home Message\n\nBayesian statistics differ greatly from frequentist statistics in the framing and questioning of probabilities\nWhile frequentist statistics do remain prominent, advanced methodologists are seeing more innovating ways to apply Bayesian methods to success in neuropsychological research\nBecause of their unique position, Bayes-inspired methods offer a meaningful way to pursue new advances in research and clinical thinking\nWhile innovative, there are still many challenges in practically applying these ideas to the daily work of psychometrists"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-contact-info",
+    "href": "presentation/presentation_slides.html#sec-contact-info",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "6.3 Contact Information",
+    "text": "6.3 Contact Information\nThank you for your attention today - I welcome you to stay in touch with me to talk about this topic and other exciting neuropsychology!\n\nEmail: Quinton.Quagliano@trinity-health.org\nFind me on LinkedIn!\n\nAny Questions?"
   }
 ]

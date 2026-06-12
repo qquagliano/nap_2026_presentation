@@ -12,39 +12,191 @@ link-citations: true
 link-bibliography: true
 ---
 
+```{r}
+base::library(package = magrittr)
+base::library(package = sessioninfo)
+```
+
 # Introduction
 
-## Follow Along
+::: {.content-visible when-format="html"}
 
-::: {.r-stack}
+## Follow Along {#sec-follow-along}
 
-QR Code Goes Here
+![](./imgs/qr_code.png){width=60%}
 
-:::
-
-::: {.r-stack}
-
-<https://qquagliano.github.io/nap_2026_presentation/presentation/presentation_slides.html>
+<http://bit.ly/49UzDFF>
 
 :::
 
-::: {.r-stack}
+## About Me {#sec-about-me}
 
-Shortened Link Goes Here
+- **Education**
+  - B.S. in Psychology (Neuroscience Concentration) from Calvin University
+  - M.S. in Quantitative Psychology from Ball State University
+- **Current Positions**
+  - Lead Psychometrist at Trinity Health West Michigan Medical Group -
+    Neuropsychology Department
+  - Adjunct Professor of Psychology at Grand Valley State University
+  - Adjunct Instructor of Educational Psychology at Ball State University
 
-:::
-
-## Disclosures & Disclaimers
+## Disclosures & Disclaimers {#sec-disclosure}
 
 - I have no financial disclosures or conflicts-of-interests related to this
   presentation
-
 - This presentation has not been drafted, ideated on, or edited with use of AI
   or LLMs. Any mistakes made are human error.
+- CE credits for viewing this presentation will be provided after the conclusion
+  of the conference and completion of the post-conference survey
 
-## Learning Objectives
+## Acknowledgments {#sec-acknowledgments}
 
-## References {#sec-refs}
+- To the National Association of Psychometrists (NAP) Conference Planning
+  Committee and all organizers of this conference
+- To my colleagues, Amelia VanderLeest and Blair Shaw
+- To the other presenters, before and after me
+- To you, my audience
+
+## Learning Objectives {#sec-objs}
+
+*Learning objectives below have been approved by NAP and the Board of Certified
+Psychometrists (BCP). These objectives will be met with an emphasis on relevancy
+to the discipline of psychometry.*
+
+- Learn the general, basic differences between the frequentist and Bayesian
+  frameworks for statistics
+- Review the historical and modern prevalent use of frequentist statistics in
+  neuropsychology and cognitive testing
+- Appreciate the various developing applications of Bayesian statistics to
+  neuropsychological evaluation - Consider the practical ramifications in test
+  selection and scoring that come with a Bayesian perspective, along with the
+  possible future directions for this approach
+- Understand the limitations and ramifications of implementing these methods in
+  a clinic
+
+## My Pitch {#sec-my-pitch}
+
+- Empirical and evidence-driven nurse analogy
+  - We owe it to our patients and clinics to be well-versed in empirical
+    knowledge, even if not used daily
+- Improving our stature, variety, and skills
+  - With an ever-evolving landscape involving digital testing, AI, and new
+    technology, we must be mindful of how we can train ourselves up in new
+    methods, many of which have roots in Bayesian statistics
+- Becoming skilled in statistics may offer an important avenue to future
+  research and educational opportunities!
+
+# Frequentist vs. Bayesian {#sec-frequentist-vs-bayesian}
+
+# Prevalent Use of Frequentist Statistics {#sec-frequentist-stats}
+
+# Neuropsychological Applications of the Bayesian Method {#sec-applications}
+
+# Limitations of Bayesian Methods in the Clinic and Research {#sec-limitations}
+
+# Conclusion {#sec-conclusion}
+
+## Further Reading & Resources {#sec-further-reading}
+
+- Books
+  - For a friendly and more basic introduction to the Bayesian Method
+    $\rightarrow$ *A Student's Guide to Bayesian Statistics* [@lambertStudentsGuideBayesian2018]
+  - For broad coverage of statistics topics leading up to Bayesian Methods
+    $\rightarrow$ *Statistical Rethinking, 2nd Edition* [@mcelreathStatisticalRethinkingBayesian2020]
+  - For more focused applications of Bayesian Methods to psychology
+    $\rightarrow$
+    *Bayesian Statistics for the Social Sciences, 2nd Edition* [@kaplanBayesianStatisticsSocial2024]
+- Review the [References] of this presentation for scientific articles that show
+  these methods in action!
+
+## Take-home Message {#sec-take-home}
+
+- Bayesian statistics differ greatly from frequentist statistics in the framing
+  and questioning of probabilities
+- While frequentist statistics do remain prominent, advanced methodologists are
+  seeing more innovating ways to apply Bayesian methods to success in
+  neuropsychological research
+- Because of their unique position, Bayes-inspired methods offer a meaningful
+  way to pursue new advances in research and clinical thinking
+- While innovative, there are still many challenges in practically applying
+  these ideas to the daily work of psychometrists
+
+## Contact Information {#sec-contact-info}
+
+Thank you for your attention today - I welcome you to stay in touch with me to
+talk about this topic and other exciting neuropsychology!
+
+- Email: <Quinton.Quagliano@trinity-health.org>
+- [Find me on LinkedIn](https://www.linkedin.com/in/quintonquagliano)!
+
+Any Questions?
+
+::: {.content-visible when-format="pdf"}
+
+# Technical Information {#sec-tech-info}
+
+## System and Program Information {#sec-system-program-info}
+
+Replicability of this file is dependent on having all necessary system
+dependencies. These include, but are not limited to, a TeX distribution, Pandoc,
+R, all listed R packages and their dependencies, and many more. Please ensure
+that your system is capable of knitting other Quarto documents and running R
+code.
+
+Alternatively, the build environment can be replicated using the included nix
+flake file, which can replicate the exact TeX, Quarto, and R package versions
+used in this analysis. Please see the section on [Reproducability Information].
+
+This work has been version controlled with git, to improve ability to review
+history of files. All source code, files needed to reproduce, and .git files
+will be included with this document for transparency. The source code used to
+generate this document, and it's accompanying presentation, [can be found on
+Github](https://github.com/qquagliano/nap_2025_presentation/tree/master).
+
+See @tbl-tech-info for system, R, and package information regarding the system
+that this document was originally rendered on.
+
+```{r}
+#| label: tbl-tech-info
+#| tbl-cap: "Technical Information"
+#| tbl-subcap:
+#|   - "System and R Information"
+#|   - "Packages"
+#| layout-ncol: 2
+#| output: true
+
+base::R.Version() |>
+  base::data.frame() |>
+  base::t() |>
+  magrittr::set_colnames("Specifications") |>
+  knitr::kable()
+
+pkgs <- sessioninfo::package_info(
+  pkgs         = base::.packages(),
+  dependencies = FALSE
+)
+
+base::data.frame(
+  package = pkgs$package,
+  version = pkgs$ondiskversion
+) |>
+  magrittr::set_colnames(c("Package", "Version")) |>
+  knitr::kable()
+```
+
+## Reproducability Information {#sec-reproduce}
+
+Steps have been taken to make this document reproducible and able to be audited.
+Prior to attempting the steps in reproducing this work and generated
+PDF/presentation, please acquire/install any necessary tools and packages, as
+listed in @sec-system-program-info. Because of limitations in testing time, it
+cannot be guaranteed that this work is entirely reproducible - please contact
+the author using information from the [Contact Information] section to get in
+touch if anything seems off.
+
+:::
+
+# References {#sec-refs}
 
 ::: {#refs}
 :::

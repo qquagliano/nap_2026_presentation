@@ -39,8 +39,10 @@
           kableExtra
           knitr
           languageserver # For R LSP support in text editors/IDEs
+          magrittr
           quarto
           renv
+          sessioninfo
         ];
         # Make R and Quarto with packages above
         my_R = pkgs.rWrapper.override {
