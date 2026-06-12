@@ -32,7 +32,7 @@
     "href": "presentation/presentation_slides.html#sec-objs",
     "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
     "section": "1.5 Learning Objectives",
-    "text": "1.5 Learning Objectives\nLearning objectives below have been approved by NAP and the Board of Certified Psychometrists (BCP). These objectives will be met with an emphasis on relevancy to the discipline of psychometry.\n\nLearn the general, basic differences between the frequentist and Bayesian frameworks for statistics\nReview the historical and modern prevalent use of frequentist statistics in neuropsychology and cognitive testing\nAppreciate the various developing applications of Bayesian statistics to neuropsychological evaluation - Consider the practical ramifications in test selection and scoring that come with a Bayesian perspective, along with the possible future directions for this approach\nUnderstand the limitations and ramifications of implementing these methods in a clinic"
+    "text": "1.5 Learning Objectives\nLearning objectives below have been approved by NAP and the Board of Certified Psychometrists (BCP). These objectives will be met with an emphasis on relevancy to the discipline of psychometry. These objectives are written for an audience of psychometrist with at least an undergraduate degree containing at least one course on statistics and/or quantitative methods.\n\nLearn the general, basic differences between the frequentist and Bayesian frameworks for statistics\nReview the historical and modern prevalent use of frequentist statistics in neuropsychology and cognitive testing\nAppreciate the various developing applications of Bayesian statistics to neuropsychological evaluation - Consider the practical ramifications in test selection and scoring that come with a Bayesian perspective, along with the possible future directions for this approach\nUnderstand the limitations and ramifications of implementing these methods in a clinic"
   },
   {
     "objectID": "presentation/presentation_slides.html#sec-my-pitch",
@@ -40,6 +40,55 @@
     "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
     "section": "1.6 My Pitch",
     "text": "1.6 My Pitch\n\nEmpirical and evidence-driven nurse analogy\n\nWe owe it to our patients and clinics to be well-versed in empirical knowledge, even if not used daily\n\nImproving our stature, variety, and skills\n\nWith an ever-evolving landscape involving digital testing, AI, and new technology, we must be mindful of how we can train ourselves up in new methods, many of which have roots in Bayesian statistics\n\nBecoming skilled in statistics may offer an important avenue to future research and educational opportunities!"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-review-freq",
+    "href": "presentation/presentation_slides.html#sec-review-freq",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "2.1 Review of Frequentist Statistics",
+    "text": "2.1 Review of Frequentist Statistics\nImportant: We are going to get deep in the theory here for just a moment, bear with me! We'll skip the truly theoretical and philosophical stuff - but this will feel the furthest from the work of psychometry.\n\nFrequentist statistics is a framework of statistics build on the belief that probability is defined as long-run frequency, or relative frequency over an infinite number of trials\n\nSimple example: if I were to flip a fair coin an infinite number of times, it would land on head 50% of the time\nMore complex example: if I were to gather an infinite number of samples from a specified population of US people, the relativity frequency of them having epilepsy would be 1.1% (Kobau et al., 2023)\n\nConnection to statistics (as we are used to seeing)\n\n\\(p = 0.02\\) (p-value) in a comparison between group A and group B on scores on a standardized test\nFrequentist interpretation: under the assumption that the null hypothesis is true, there is a 2% chance of this difference having randomly occurred in an infinite number of comparisons from these two populations\nPractical conclusion: if \\(\\alpha = 0.05\\), then we can provide evidence that the null hypothesis that these two populations have the same test scores\n\nWhether you remember it or not, this was almost certainly the way you learned statistics the first time!"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-intro-bayes",
+    "href": "presentation/presentation_slides.html#sec-intro-bayes",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "2.2 Introduction to Bayesian Statistics",
+    "text": "2.2 Introduction to Bayesian Statistics\n\nBayesian statistics is a framework of statistics built up the belief that probability is the degree of belief of an event\n\nSimple example: Initially, I think that the dice are fair, and there is a 1/6 chance of rolling a 6, however, after learning the dice are rigged, I believe that the chance of rolling a 6 are 1/36.\nComplex example: Upon arriving at the clinic, I believe a person who is 71+ years old has a 13.9% chance of being diagnosed with dementia due to base rates (Plassman et al., 2007). However, after passing several functional and memory measures I believe they only have a 4% chance of being diagnosed with dementia\n\nBayesian statistics are rooted in use of Bayes Theorem, that describes the process of updating the degree of belief based upon new information. It is:\n\n\\[\nP(A | B) = \\frac{P(B | A)*P(A)}{P(B)}\n\\]\n\nWhere:\n\n\\(A\\) and \\(B\\) are both events; \\(B\\) in particular can be thought of as “new evidence”\n\\(P(A)\\) is the probability of event \\(A\\) occurring; also called the prior probability\n\\(P(B)\\) is the probability of event \\(B\\) occurring\n\\(P(A | B)\\) is the probability of \\(A\\), given \\(B\\) is true; also called the posterior probability\n\\(P(B | A)\\) is the probability of \\(A\\), given \\(B\\) is true; also called the likelihood function\n\nEffectively, Bayes Theorem is all about how we update our degree of belief in \\(A\\), given evidence \\(B\\). This may be a brand new way to think about probabilities for you!"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-differ-methods",
+    "href": "presentation/presentation_slides.html#sec-differ-methods",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "2.3 How They Differ",
+    "text": "2.3 How They Differ\n\nFrequentist statistics are rooted in describing long-run frequency and probabilities of certain events occurring by considering an infinite number of trials\nBayesian statistics are about modifying degree of belief in a certain outcome given new information\n\nImportant: While not mutually exclusive, it's important to realize that these define probability differently, and thus generate controversy on which is 'right' \n\nFor a more robust description of the long-running debate, see Bayarri & Berger (2004)"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-ex-freq",
+    "href": "presentation/presentation_slides.html#sec-ex-freq",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "3.1 Examples of Frequentist Statistics",
+    "text": "3.1 Examples of Frequentist Statistics\nIn Concept\n\nz-tests, t-tests, ANOVA - any parametric model that produces a p-value, as the p-value itself is a judgment of long-run frequency or probability of the event being “real”\nDue, to their non-parametric nature, tests like \\(\\chi^2\\) don’t mesh as well with the definition of frequentist, but the production of the p-value still means they do!\n\nIn Research\nImportant: Pretty much published, empirical neuropsychology article will contain use of Frequentist tests! \n\nTo use some brief examples from recent NAP journal clubs:\n\nWhitaker et al. (2024) used several t-tests and chi-square tests when determining if there were significant differences in brain cancer patients on the CVLT-C and the ChAMP.\nVyhnalek et al. (2015) used ANOVA, \\(\\chi^2\\) tests, and linear regression to identify differences in Olfaction between several different MCI groups\n\nIn both prior examples, the frequentist models were used to answer questions about comparing groups to one another and the likelihood of them being as different as they were, if the null was true.\n\nIn Clinic?\n\nFrequentist methods usually require multi-person samples for analysis, so it’s use is limited at the single sample level\nHowever, one use is in the generation of a p-value for a binomial distribution on forced choice performance validity tests, like the VSVT (Resch et al., 2021)"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-benefits-freq",
+    "href": "presentation/presentation_slides.html#sec-benefits-freq",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "3.2 Benefits of Frequentist Statistics",
+    "text": "3.2 Benefits of Frequentist Statistics\n\nAs the longstanding predominant statistical method for the last 100 years (Efron, 2005), frequentist statistic enjoy wide acceptance as suitable evidence for backing claims of impact and differences\nThese analyses provide concrete statements about the likelihood of a Type I error in judgment occurring - in the form of the p-value\nPractical in studying groups, and relatively simple to interpret and draw conclusions from"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-drawbacks-freq",
+    "href": "presentation/presentation_slides.html#sec-drawbacks-freq",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "3.3 Drawbacks of Frequentist Statistics",
+    "text": "3.3 Drawbacks of Frequentist Statistics\n\nLimited usefulness in small-n sizes or single-case studies, such as when analyzing a single patient in a clinical setting\n\nImportant: While I am not out here to argue against the frequentist approach, this is one of the main areas where it fails to offer a practical use in clinical application!"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-ex-bayes",
+    "href": "presentation/presentation_slides.html#sec-ex-bayes",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "4.1 Examples of Bayesian Statistics",
+    "text": "4.1 Examples of Bayesian Statistics\nIn Concept\nIn Research\nIn Clinic"
   },
   {
     "objectID": "presentation/presentation_slides.html#sec-further-reading",
@@ -60,6 +109,13 @@
     "href": "presentation/presentation_slides.html#sec-contact-info",
     "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
     "section": "6.3 Contact Information",
-    "text": "6.3 Contact Information\nThank you for your attention today - I welcome you to stay in touch with me to talk about this topic and other exciting neuropsychology!\n\nEmail: Quinton.Quagliano@trinity-health.org\nFind me on LinkedIn!\n\nAny Questions?"
+    "text": "6.3 Contact Information\nThank you for your attention today - I welcome you to stay in touch with me to talk about this topic and other exciting neuropsychology!\n\nEmail: Quinton.Quagliano@trinity-health.org\nFind me on LinkedIn!\nIf you wish to re-use or cite today’s presentation, please follow all customary rules on attribution to myself\n\nAny Questions?"
+  },
+  {
+    "objectID": "presentation/presentation_slides.html#sec-refs",
+    "href": "presentation/presentation_slides.html#sec-refs",
+    "title": "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists",
+    "section": "6.4 References",
+    "text": "6.4 References\n\n\nBache, S. M., & Wickham, H. (2025). Magrittr: A forward-pipe operator for r. https://magrittr.tidyverse.org\n\n\nBayarri, M. J., & Berger, J. O. (2004). The Interplay of Bayesian and Frequentist Analysis. Statistical Science, 19(1). https://doi.org/10.1214/088342304000000116\n\n\nEfron, B. (2005). Bayesians, Frequentists, and Scientists. Journal of the American Statistical Association, 100(469), 1–5. https://doi.org/10.1198/016214505000000033\n\n\nKaplan, D. (2024). Bayesian statistics for the social sciences (Second edition). The Guilford Press.\n\n\nKobau, R., Luncheon, C., & Greenlund, K. (2023). Active epilepsy prevalence among U.S. Adults is 1.1% and differs by educational level—National Health Interview Survey, United States, 2021. Epilepsy & Behavior, 142, 109180. https://doi.org/10.1016/j.yebeh.2023.109180\n\n\nLambert, B. (2018). A student’s guide to Bayesian statistics. SAGE.\n\n\nMcElreath, R. (2020). Statistical rethinking: A Bayesian course with examples in R and Stan (Second edition). CRC Press.\n\n\nPlassman, B. L., Langa, K. M., Fisher, G. G., Heeringa, S. G., Weir, D. R., Ofstedal, M. B., Burke, J. R., Hurd, M. D., Potter, G. G., Rodgers, W. L., Steffens, D. C., Willis, R. J., & Wallace, R. B. (2007). Prevalence of Dementia in the United States: The Aging, Demographics, and Memory Study. Neuroepidemiology, 29(1–2), 125–132. https://doi.org/10.1159/000109998\n\n\nR Core Team. (2026). R: A language and environment for statistical computing. R Foundation for Statistical Computing. https://www.R-project.org/\n\n\nResch, Z. J., Webber, T. A., Bernstein, M. T., Rhoads, T., Ovsiew, G. P., & Soble, J. R. (2021). Victoria Symptom Validity Test: A Systematic Review and Cross-Validation Study. Neuropsychology Review, 31(2), 331–348. https://doi.org/10.1007/s11065-021-09477-5\n\n\nVyhnalek, M., Magerova, H., Andel, R., Nikolai, T., Kadlecova, A., Laczo, J., & Hort, J. (2015). Olfactory identification in amnestic and non-amnestic mild cognitive impairment and its neuropsychological correlates. Journal of the Neurological Sciences, 349(1–2), 179–184. https://doi.org/10.1016/j.jns.2015.01.014\n\n\nWhitaker, A. M., Wood, Z. B., Hawthorne, K., & Mendoza, L. (2024). Assessing learning and memory among patients with pediatric brain tumor (PBT): A comparison of measures. Child Neuropsychology, 30(4), 551–562. https://doi.org/10.1080/09297049.2023.2229026\n\n\nWickham, H., Chang, W., Flight, R., Müller, K., & Hester, J. (2025). Sessioninfo: R session information. https://github.com/r-lib/sessioninfo#readme\n\n\n\n\n\n\n\n\n\n \n\n\nAn Introduction to Bayesian Methods in Neuropsychology for Psychometrists"
   }
 ]

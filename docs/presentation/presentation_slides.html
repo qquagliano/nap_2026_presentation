@@ -816,7 +816,7 @@ font-size: 45px;
 font-size: 40px;
 }
 .reveal .footer {
-color: #0032A0;
+color: #561185;
 }
 .reveal a {
 text-decoration: underline dotted;
@@ -826,7 +826,7 @@ font-size: 35px;
 font-family: Liberation Sans;
 }
 .reveal .fragment.highlight-current-custom.current-fragment {
-color: #0032A0;
+color: #561185;
 }
 :root {
 --r-main-font: Liberation Sans;
@@ -1574,10 +1574,9 @@ Quinton Quagliano, M.S., B.C.S.P.
 <li class="fragment"><a href="#/introduction" id="/toc-introduction"><span class="header-section-number">1</span> Introduction</a></li>
 <li class="fragment"><a href="#/sec-frequentist-vs-bayesian" id="/toc-sec-frequentist-vs-bayesian"><span class="header-section-number">2</span> Frequentist vs. Bayesian</a></li>
 <li class="fragment"><a href="#/sec-frequentist-stats" id="/toc-sec-frequentist-stats"><span class="header-section-number">3</span> Prevalent Use of Frequentist Statistics</a></li>
-<li class="fragment"><a href="#/sec-applications" id="/toc-sec-applications"><span class="header-section-number">4</span> Neuropsychological Applications of the Bayesian Method</a></li>
+<li class="fragment"><a href="#/sec-applications" id="/toc-sec-applications"><span class="header-section-number">4</span> Applications of the Bayesian Method</a></li>
 <li class="fragment"><a href="#/sec-limitations" id="/toc-sec-limitations"><span class="header-section-number">5</span> Limitations of Bayesian Methods in the Clinic and Research</a></li>
 <li class="fragment"><a href="#/sec-conclusion" id="/toc-sec-conclusion"><span class="header-section-number">6</span> Conclusion</a></li>
-<li class="fragment"><a href="#/sec-refs" id="/toc-sec-refs"><span class="header-section-number">7</span> References</a></li>
 </ul>
 </nav>
 </section>
@@ -1598,16 +1597,13 @@ Quinton Quagliano, M.S., B.C.S.P.
 <p><span class="header-section-number">3</span> Prevalent Use of Frequentist Statistics</p>
 </div>
 <div class="agenda-inactive agenda-post-active">
-<p><span class="header-section-number">4</span> Neuropsychological Applications of the Bayesian Method</p>
+<p><span class="header-section-number">4</span> Applications of the Bayesian Method</p>
 </div>
 <div class="agenda-inactive agenda-post-active">
 <p><span class="header-section-number">5</span> Limitations of Bayesian Methods in the Clinic and Research</p>
 </div>
 <div class="agenda-inactive agenda-post-active">
 <p><span class="header-section-number">6</span> Conclusion</p>
-</div>
-<div class="agenda-inactive agenda-post-active">
-<p><span class="header-section-number">7</span> References</p>
 </div>
 </div>
 </section>
@@ -1651,7 +1647,7 @@ Quinton Quagliano, M.S., B.C.S.P.
 </section>
 <section id="sec-objs" class="slide level2" data-number="1.5">
 <h2><span class="header-section-number">1.5</span> Learning Objectives</h2>
-<p><em>Learning objectives below have been approved by NAP and the Board of Certified Psychometrists (BCP). These objectives will be met with an emphasis on relevancy to the discipline of psychometry.</em></p>
+<p><em>Learning objectives below have been approved by NAP and the Board of Certified Psychometrists (BCP). These objectives will be met with an emphasis on relevancy to the discipline of psychometry. These objectives are written for an audience of psychometrist with at least an undergraduate degree containing at least one course on statistics and/or quantitative methods.</em></p>
 <ul>
 <li class="fragment">Learn the general, basic differences between the frequentist and Bayesian frameworks for statistics</li>
 <li class="fragment">Review the historical and modern prevalent use of frequentist statistics in neuropsychology and cognitive testing</li>
@@ -1673,6 +1669,7 @@ Quinton Quagliano, M.S., B.C.S.P.
 <li class="fragment">Becoming skilled in statistics may offer an important avenue to future research and educational opportunities!</li>
 </ul>
 </section></section>
+<section>
 <section id="sec-frequentist-vs-bayesian" class="title-slide slide level1 agenda-slide center" data-number="2">
 <h1><span class="header-section-number">2</span> Frequentist vs. Bayesian</h1>
 <div class="agenda-heading">
@@ -1689,7 +1686,7 @@ Quinton Quagliano, M.S., B.C.S.P.
 <p><span class="header-section-number">3</span> Prevalent Use of Frequentist Statistics</p>
 </div>
 <div class="agenda-inactive agenda-post-active">
-<p><span class="header-section-number">4</span> Neuropsychological Applications of the Bayesian Method</p>
+<p><span class="header-section-number">4</span> Applications of the Bayesian Method</p>
 </div>
 <div class="agenda-inactive agenda-post-active">
 <p><span class="header-section-number">5</span> Limitations of Bayesian Methods in the Clinic and Research</p>
@@ -1697,12 +1694,63 @@ Quinton Quagliano, M.S., B.C.S.P.
 <div class="agenda-inactive agenda-post-active">
 <p><span class="header-section-number">6</span> Conclusion</p>
 </div>
-<div class="agenda-inactive agenda-post-active">
-<p><span class="header-section-number">7</span> References</p>
-</div>
 </div>
 </section>
-
+<section id="sec-review-freq" class="slide level2" data-number="2.1">
+<h2><span class="header-section-number">2.1</span> Review of Frequentist Statistics</h2>
+<ul><li class="fragment highlight-current-custom"><b>Important: We are going to get deep in the theory here for just a moment, bear with me! We&#39;ll skip the truly theoretical and philosophical stuff - but this will feel the furthest from the work of psychometry.</b></li></ul>
+<ul>
+<li class="fragment"><b>Frequentist statistics</b> is a framework of statistics build on the belief that <b>probability</b> is defined as long-run frequency, or relative frequency over an infinite number of trials
+<ul>
+<li class="fragment">Simple example: if I were to flip a fair coin an infinite number of times, it would land on head 50% of the time</li>
+<li class="fragment">More complex example: if I were to gather an infinite number of samples from a specified population of US people, the relativity frequency of them having epilepsy would be 1.1% <span class="citation" data-cites="kobauActiveEpilepsyPrevalence2023">(<a href="#/sec-refs" role="doc-biblioref" onclick>Kobau et al., 2023</a>)</span></li>
+</ul></li>
+<li class="fragment">Connection to statistics (as we are used to seeing)
+<ul>
+<li class="fragment"><span class="math inline">\(p = 0.02\)</span> (<b>p-value</b>) in a comparison between group A and group B on scores on a standardized test</li>
+<li class="fragment">Frequentist interpretation: under the assumption that the null hypothesis is true, there is a 2% chance of this difference having randomly occurred in an infinite number of comparisons from these two populations</li>
+<li class="fragment">Practical conclusion: if <span class="math inline">\(\alpha = 0.05\)</span>, then we can provide evidence that the null hypothesis that these two populations have the same test scores</li>
+</ul></li>
+<li class="fragment">Whether you remember it or not, this was almost certainly the way you learned statistics the first time!</li>
+</ul>
+</section>
+<section id="sec-intro-bayes" class="slide level2" data-number="2.2">
+<h2><span class="header-section-number">2.2</span> Introduction to Bayesian Statistics</h2>
+<ul>
+<li class="fragment"><b>Bayesian statistics</b> is a framework of statistics built up the belief that probability is the degree of belief of an event
+<ul>
+<li class="fragment">Simple example: Initially, I think that the dice are fair, and there is a 1/6 chance of rolling a 6, however, after learning the dice are rigged, I believe that the chance of rolling a 6 are 1/36.</li>
+<li class="fragment">Complex example: Upon arriving at the clinic, I believe a person who is 71+ years old has a 13.9% chance of being diagnosed with dementia due to base rates <span class="citation" data-cites="plassmanPrevalenceDementiaUnited2007">(<a href="#/sec-refs" role="doc-biblioref" onclick>Plassman et al., 2007</a>)</span>. However, after passing several functional and memory measures I believe they only have a 4% chance of being diagnosed with dementia</li>
+</ul></li>
+<li class="fragment">Bayesian statistics are rooted in use of <b>Bayes Theorem</b>, that describes the process of updating the degree of belief based upon new information. It is:</li>
+</ul>
+<p><span class="math display">\[
+P(A | B) = \frac{P(B | A)*P(A)}{P(B)}
+\]</span></p>
+<ul>
+<li class="fragment">Where:
+<ul>
+<li class="fragment"><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are both events; <span class="math inline">\(B\)</span> in particular can be thought of as “new evidence”</li>
+<li class="fragment"><span class="math inline">\(P(A)\)</span> is the probability of event <span class="math inline">\(A\)</span> occurring; also called the <b>prior probability</b></li>
+<li class="fragment"><span class="math inline">\(P(B)\)</span> is the probability of event <span class="math inline">\(B\)</span> occurring</li>
+<li class="fragment"><span class="math inline">\(P(A | B)\)</span> is the probability of <span class="math inline">\(A\)</span>, given <span class="math inline">\(B\)</span> is true; also called the <b>posterior probability</b></li>
+<li class="fragment"><span class="math inline">\(P(B | A)\)</span> is the probability of <span class="math inline">\(A\)</span>, given <span class="math inline">\(B\)</span> is true; also called the <b>likelihood function</b></li>
+</ul></li>
+<li class="fragment">Effectively, Bayes Theorem is all about how we update our degree of belief in <span class="math inline">\(A\)</span>, given evidence <span class="math inline">\(B\)</span>. This may be a brand new way to think about probabilities for you!</li>
+</ul>
+</section>
+<section id="sec-differ-methods" class="slide level2" data-number="2.3">
+<h2><span class="header-section-number">2.3</span> How They Differ</h2>
+<ul>
+<li class="fragment"><p>Frequentist statistics are rooted in describing long-run frequency and probabilities of certain events occurring by considering an infinite number of trials</p></li>
+<li class="fragment"><p>Bayesian statistics are about modifying degree of belief in a certain outcome given new information</p></li>
+</ul>
+<ul><li class="fragment highlight-current-custom"><b>Important: While not mutually exclusive, it&#39;s important to realize that these define probability differently, and thus generate controversy on which is &#39;right&#39; </b></li></ul>
+<ul>
+<li class="fragment">For a more robust description of the long-running debate, see <span class="citation" data-cites="bayarriInterplayBayesianFrequentist2004">Bayarri &amp; Berger (<a href="#/sec-refs" role="doc-biblioref" onclick>2004</a>)</span></li>
+</ul>
+</section></section>
+<section>
 <section id="sec-frequentist-stats" class="title-slide slide level1 agenda-slide center" data-number="3">
 <h1><span class="header-section-number">3</span> Prevalent Use of Frequentist Statistics</h1>
 <div class="agenda-heading">
@@ -1719,7 +1767,7 @@ Quinton Quagliano, M.S., B.C.S.P.
 <p><span class="header-section-number">3</span> Prevalent Use of Frequentist Statistics</p>
 </div>
 <div class="agenda-inactive agenda-post-active">
-<p><span class="header-section-number">4</span> Neuropsychological Applications of the Bayesian Method</p>
+<p><span class="header-section-number">4</span> Applications of the Bayesian Method</p>
 </div>
 <div class="agenda-inactive agenda-post-active">
 <p><span class="header-section-number">5</span> Limitations of Bayesian Methods in the Clinic and Research</p>
@@ -1727,14 +1775,49 @@ Quinton Quagliano, M.S., B.C.S.P.
 <div class="agenda-inactive agenda-post-active">
 <p><span class="header-section-number">6</span> Conclusion</p>
 </div>
-<div class="agenda-inactive agenda-post-active">
-<p><span class="header-section-number">7</span> References</p>
-</div>
 </div>
 </section>
-
+<section id="sec-ex-freq" class="slide level2" data-number="3.1">
+<h2><span class="header-section-number">3.1</span> Examples of Frequentist Statistics</h2>
+<h3 id="sec-concept-freq">In Concept</h3>
+<ul>
+<li class="fragment"><p><b>z-tests</b>, <b>t-tests</b>, <b>ANOVA</b> - any parametric model that produces a p-value, as the p-value itself is a judgment of long-run frequency or probability of the event being “real”</p></li>
+<li class="fragment"><p>Due, to their <b>non-parametric</b> nature, tests like <span class="math inline">\(\chi^2\)</span> don’t mesh as well with the definition of frequentist, but the production of the p-value still means they do!</p></li>
+</ul>
+<h3 id="sec-research-freq">In Research</h3>
+<ul><li class="fragment highlight-current-custom"><b>Important: Pretty much published, empirical neuropsychology article will contain use of Frequentist tests! </b></li></ul>
+<ul>
+<li class="fragment">To use some brief examples from recent NAP journal clubs:
+<ul>
+<li class="fragment"><span class="citation" data-cites="whitakerAssessingLearningMemory2024">Whitaker et al. (<a href="#/sec-refs" role="doc-biblioref" onclick>2024</a>)</span> used several t-tests and chi-square tests when determining if there were significant differences in brain cancer patients on the CVLT-C and the ChAMP.</li>
+<li class="fragment"><span class="citation" data-cites="vyhnalekOlfactoryIdentificationAmnestic2015">Vyhnalek et al. (<a href="#/sec-refs" role="doc-biblioref" onclick>2015</a>)</span> used ANOVA, <span class="math inline">\(\chi^2\)</span> tests, and linear regression to identify differences in Olfaction between several different MCI groups</li>
+</ul></li>
+<li class="fragment">In both prior examples, the frequentist models were used to answer questions about comparing groups to one another and the likelihood of them being as different as they were, if the null was true.</li>
+</ul>
+<h3 id="sec-clinic-freq">In Clinic?</h3>
+<ul>
+<li class="fragment"><p>Frequentist methods usually require multi-person samples for analysis, so it’s use is limited at the single sample level</p></li>
+<li class="fragment"><p>However, one use is in the generation of a p-value for a <b>binomial distribution</b> on forced choice performance validity tests, like the VSVT <span class="citation" data-cites="reschVictoriaSymptomValidity2021">(<a href="#/sec-refs" role="doc-biblioref" onclick>Resch et al., 2021</a>)</span></p></li>
+</ul>
+</section>
+<section id="sec-benefits-freq" class="slide level2" data-number="3.2">
+<h2><span class="header-section-number">3.2</span> Benefits of Frequentist Statistics</h2>
+<ul>
+<li class="fragment"><p>As the longstanding predominant statistical method for the last 100 years <span class="citation" data-cites="efronBayesiansFrequentistsScientists2005">(<a href="#/sec-refs" role="doc-biblioref" onclick>Efron, 2005</a>)</span>, frequentist statistic enjoy wide acceptance as suitable evidence for backing claims of impact and differences</p></li>
+<li class="fragment"><p>These analyses provide concrete statements about the likelihood of a <b>Type I error</b> in judgment occurring - in the form of the p-value</p></li>
+<li class="fragment"><p>Practical in studying groups, and relatively simple to interpret and draw conclusions from</p></li>
+</ul>
+</section>
+<section id="sec-drawbacks-freq" class="slide level2" data-number="3.3">
+<h2><span class="header-section-number">3.3</span> Drawbacks of Frequentist Statistics</h2>
+<ul>
+<li class="fragment">Limited usefulness in small-n sizes or single-case studies, such as when analyzing a single patient in a clinical setting</li>
+</ul>
+<ul><li class="fragment highlight-current-custom"><b>Important: While I am not out here to argue against the frequentist approach, this is one of the main areas where it fails to offer a practical use in clinical application!</b></li></ul>
+</section></section>
+<section>
 <section id="sec-applications" class="title-slide slide level1 agenda-slide center" data-number="4">
-<h1><span class="header-section-number">4</span> Neuropsychological Applications of the Bayesian Method</h1>
+<h1><span class="header-section-number">4</span> Applications of the Bayesian Method</h1>
 <div class="agenda-heading">
 <p>Agenda</p>
 </div>
@@ -1749,7 +1832,7 @@ Quinton Quagliano, M.S., B.C.S.P.
 <p><span class="header-section-number">3</span> Prevalent Use of Frequentist Statistics</p>
 </div>
 <div class="agenda-active">
-<p><span class="header-section-number">4</span> Neuropsychological Applications of the Bayesian Method</p>
+<p><span class="header-section-number">4</span> Applications of the Bayesian Method</p>
 </div>
 <div class="agenda-inactive agenda-post-active">
 <p><span class="header-section-number">5</span> Limitations of Bayesian Methods in the Clinic and Research</p>
@@ -1757,12 +1840,14 @@ Quinton Quagliano, M.S., B.C.S.P.
 <div class="agenda-inactive agenda-post-active">
 <p><span class="header-section-number">6</span> Conclusion</p>
 </div>
-<div class="agenda-inactive agenda-post-active">
-<p><span class="header-section-number">7</span> References</p>
-</div>
 </div>
 </section>
-
+<section id="sec-ex-bayes" class="slide level2" data-number="4.1">
+<h2><span class="header-section-number">4.1</span> Examples of Bayesian Statistics</h2>
+<h3 id="sec-concept-bayes">In Concept</h3>
+<h3 id="sec-research-bayes">In Research</h3>
+<h3 id="sec-clinic-bayes">In Clinic</h3>
+</section></section>
 <section id="sec-limitations" class="title-slide slide level1 agenda-slide center" data-number="5">
 <h1><span class="header-section-number">5</span> Limitations of Bayesian Methods in the Clinic and Research</h1>
 <div class="agenda-heading">
@@ -1779,16 +1864,13 @@ Quinton Quagliano, M.S., B.C.S.P.
 <p><span class="header-section-number">3</span> Prevalent Use of Frequentist Statistics</p>
 </div>
 <div class="agenda-inactive agenda-pre-active">
-<p><span class="header-section-number">4</span> Neuropsychological Applications of the Bayesian Method</p>
+<p><span class="header-section-number">4</span> Applications of the Bayesian Method</p>
 </div>
 <div class="agenda-active">
 <p><span class="header-section-number">5</span> Limitations of Bayesian Methods in the Clinic and Research</p>
 </div>
 <div class="agenda-inactive agenda-post-active">
 <p><span class="header-section-number">6</span> Conclusion</p>
-</div>
-<div class="agenda-inactive agenda-post-active">
-<p><span class="header-section-number">7</span> References</p>
 </div>
 </div>
 </section>
@@ -1810,16 +1892,13 @@ Quinton Quagliano, M.S., B.C.S.P.
 <p><span class="header-section-number">3</span> Prevalent Use of Frequentist Statistics</p>
 </div>
 <div class="agenda-inactive agenda-pre-active">
-<p><span class="header-section-number">4</span> Neuropsychological Applications of the Bayesian Method</p>
+<p><span class="header-section-number">4</span> Applications of the Bayesian Method</p>
 </div>
 <div class="agenda-inactive agenda-pre-active">
 <p><span class="header-section-number">5</span> Limitations of Bayesian Methods in the Clinic and Research</p>
 </div>
 <div class="agenda-active">
 <p><span class="header-section-number">6</span> Conclusion</p>
-</div>
-<div class="agenda-inactive agenda-post-active">
-<p><span class="header-section-number">7</span> References</p>
 </div>
 </div>
 </section>
@@ -1850,46 +1929,51 @@ Quinton Quagliano, M.S., B.C.S.P.
 <ul>
 <li class="fragment">Email: <a href="mailto:Quinton.Quagliano@trinity-health.org" class="email">Quinton.Quagliano@trinity-health.org</a></li>
 <li class="fragment"><a href="https://www.linkedin.com/in/quintonquagliano">Find me on LinkedIn</a>!</li>
+<li class="fragment"><em>If you wish to re-use or cite today’s presentation, please follow all customary rules on attribution to myself</em></li>
 </ul>
 <p>Any Questions?</p>
-</section></section>
-<section id="sec-refs" class="title-slide slide level1 agenda-slide smaller scrollable" data-number="7">
-<h1><span class="header-section-number">7</span> References</h1>
-<div class="agenda-heading">
-<p>Agenda</p>
-</div>
-<div class="agenda">
-<div class="agenda-inactive agenda-pre-active">
-<p><span class="header-section-number">1</span> Introduction</p>
-</div>
-<div class="agenda-inactive agenda-pre-active">
-<p><span class="header-section-number">2</span> Frequentist vs. Bayesian</p>
-</div>
-<div class="agenda-inactive agenda-pre-active">
-<p><span class="header-section-number">3</span> Prevalent Use of Frequentist Statistics</p>
-</div>
-<div class="agenda-inactive agenda-pre-active">
-<p><span class="header-section-number">4</span> Neuropsychological Applications of the Bayesian Method</p>
-</div>
-<div class="agenda-inactive agenda-pre-active">
-<p><span class="header-section-number">5</span> Limitations of Bayesian Methods in the Clinic and Research</p>
-</div>
-<div class="agenda-inactive agenda-pre-active">
-<p><span class="header-section-number">6</span> Conclusion</p>
-</div>
-<div class="agenda-active">
-<p><span class="header-section-number">7</span> References</p>
-</div>
-</div>
+</section>
+<section id="sec-refs" class="slide level2 smaller scrollable" data-number="6.4">
+<h2><span class="header-section-number">6.4</span> References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-R-magrittr" class="csl-entry" role="listitem">
+Bache, S. M., &amp; Wickham, H. (2025). <em>Magrittr: A forward-pipe operator for r</em>. <a href="https://magrittr.tidyverse.org">https://magrittr.tidyverse.org</a>
+</div>
+<div id="ref-bayarriInterplayBayesianFrequentist2004" class="csl-entry" role="listitem">
+Bayarri, M. J., &amp; Berger, J. O. (2004). The <span>Interplay</span> of <span>Bayesian</span> and <span>Frequentist Analysis</span>. <em>Statistical Science</em>, <em>19</em>(1). <a href="https://doi.org/10.1214/088342304000000116">https://doi.org/10.1214/088342304000000116</a>
+</div>
+<div id="ref-efronBayesiansFrequentistsScientists2005" class="csl-entry" role="listitem">
+Efron, B. (2005). Bayesians, <span>Frequentists</span>, and <span>Scientists</span>. <em>Journal of the American Statistical Association</em>, <em>100</em>(469), 1–5. <a href="https://doi.org/10.1198/016214505000000033">https://doi.org/10.1198/016214505000000033</a>
+</div>
 <div id="ref-kaplanBayesianStatisticsSocial2024" class="csl-entry" role="listitem">
 Kaplan, D. (2024). <em>Bayesian statistics for the social sciences</em> (Second edition). The Guilford Press.
+</div>
+<div id="ref-kobauActiveEpilepsyPrevalence2023" class="csl-entry" role="listitem">
+Kobau, R., Luncheon, C., &amp; Greenlund, K. (2023). Active epilepsy prevalence among <span>U</span>.<span>S</span>. Adults is 1.1% and differs by educational level—<span>National Health Interview Survey</span>, <span>United States</span>, 2021. <em>Epilepsy &amp; Behavior</em>, <em>142</em>, 109180. <a href="https://doi.org/10.1016/j.yebeh.2023.109180">https://doi.org/10.1016/j.yebeh.2023.109180</a>
 </div>
 <div id="ref-lambertStudentsGuideBayesian2018" class="csl-entry" role="listitem">
 Lambert, B. (2018). <em>A student’s guide to <span>Bayesian</span> statistics</em>. SAGE.
 </div>
 <div id="ref-mcelreathStatisticalRethinkingBayesian2020" class="csl-entry" role="listitem">
 McElreath, R. (2020). <em>Statistical rethinking: A <span>Bayesian</span> course with examples in <span>R</span> and <span>Stan</span></em> (Second edition). CRC Press.
+</div>
+<div id="ref-plassmanPrevalenceDementiaUnited2007" class="csl-entry" role="listitem">
+Plassman, B. L., Langa, K. M., Fisher, G. G., Heeringa, S. G., Weir, D. R., Ofstedal, M. B., Burke, J. R., Hurd, M. D., Potter, G. G., Rodgers, W. L., Steffens, D. C., Willis, R. J., &amp; Wallace, R. B. (2007). Prevalence of <span>Dementia</span> in the <span>United States</span>: <span>The Aging</span>, <span>Demographics</span>, and <span>Memory Study</span>. <em>Neuroepidemiology</em>, <em>29</em>(1–2), 125–132. <a href="https://doi.org/10.1159/000109998">https://doi.org/10.1159/000109998</a>
+</div>
+<div id="ref-R-base" class="csl-entry" role="listitem">
+R Core Team. (2026). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
+</div>
+<div id="ref-reschVictoriaSymptomValidity2021" class="csl-entry" role="listitem">
+Resch, Z. J., Webber, T. A., Bernstein, M. T., Rhoads, T., Ovsiew, G. P., &amp; Soble, J. R. (2021). Victoria <span>Symptom Validity Test</span>: <span>A Systematic Review</span> and <span>Cross-Validation Study</span>. <em>Neuropsychology Review</em>, <em>31</em>(2), 331–348. <a href="https://doi.org/10.1007/s11065-021-09477-5">https://doi.org/10.1007/s11065-021-09477-5</a>
+</div>
+<div id="ref-vyhnalekOlfactoryIdentificationAmnestic2015" class="csl-entry" role="listitem">
+Vyhnalek, M., Magerova, H., Andel, R., Nikolai, T., Kadlecova, A., Laczo, J., &amp; Hort, J. (2015). Olfactory identification in amnestic and non-amnestic mild cognitive impairment and its neuropsychological correlates. <em>Journal of the Neurological Sciences</em>, <em>349</em>(1–2), 179–184. <a href="https://doi.org/10.1016/j.jns.2015.01.014">https://doi.org/10.1016/j.jns.2015.01.014</a>
+</div>
+<div id="ref-whitakerAssessingLearningMemory2024" class="csl-entry" role="listitem">
+Whitaker, A. M., Wood, Z. B., Hawthorne, K., &amp; Mendoza, L. (2024). Assessing learning and memory among patients with pediatric brain tumor (<span>PBT</span>): A comparison of measures. <em>Child Neuropsychology</em>, <em>30</em>(4), 551–562. <a href="https://doi.org/10.1080/09297049.2023.2229026">https://doi.org/10.1080/09297049.2023.2229026</a>
+</div>
+<div id="ref-R-sessioninfo" class="csl-entry" role="listitem">
+Wickham, H., Chang, W., Flight, R., Müller, K., &amp; Hester, J. (2025). <em>Sessioninfo: R session information</em>. <a href="https://github.com/r-lib/sessioninfo#readme">https://github.com/r-lib/sessioninfo#readme</a>
 </div>
 </div>
 
@@ -1908,7 +1992,7 @@ McElreath, R. (2020). <em>Statistical rethinking: A <span>Bayesian</span> course
 <p> </p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

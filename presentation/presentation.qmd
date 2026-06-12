@@ -4,17 +4,67 @@ subtitle: "National Association of Psychometrists 2026 Annual Meeting"
 author: "Quinton Quagliano, M.S., B.C.S.P."
 date: "2026-06-11"
 # SECTION: Bibliography opts
-bibliography: "./refs/refs.bib"
+bibliography: "./refs/complete.bib"
 cite-method: citeproc
 citeproc: true
 csl: "../resources/bibs/apa.csl"
 link-citations: true
 link-bibliography: true
+nocite: |
+  @*
 ---
 
 ```{r}
-base::library(package = magrittr)
-base::library(package = sessioninfo)
+#| lst-label: lst-r-libraries
+#| lst-cap: "R libraries"
+
+base::library(package = magrittr) # For advanced pipe functionality
+base::library(package = sessioninfo) # For technical info
+
+# Write all package citations to bib file for citation
+knitr::write_bib(
+  x    = base::.packages(),
+  file = "./refs/r_packages.bib"
+)
+```
+
+```{bash}
+#| lst-label: lst-citing
+#| lst-cap: "Bibliography and citations"
+
+# Check if a complete bib file already exists
+if [ -f ./refs/complete.bib ]; then
+  rm ./refs/complete.bib
+fi
+
+# Make an empty bib file
+touch ./refs/complete.bib
+
+# Append R package citation to bib file
+if [ -f ./refs/r_packages.bib ]; then
+  cat ./refs/r_packages.bib >>./refs/complete.bib
+fi
+
+# Add any additional citations to bib file
+if [ -f ./refs/refs.bib ]; then
+  cat ./refs/refs.bib >>./refs/complete.bib
+fi
+```
+
+```{r}
+#| lst-label: lst-knitr-opts
+#| lst-cap: "Knitr options"
+
+# Make NAs show as - in tables
+base::options(knitr.kable.NA = "-")
+```
+
+```{r}
+#| lst-label: lst-seed
+#| lst-cap: "Set seed"
+
+# Set seed for reproducability on sampling and bootstrapping
+base::set.seed(seed = 123)
 ```
 
 # Introduction
@@ -61,7 +111,9 @@ base::library(package = sessioninfo)
 
 *Learning objectives below have been approved by NAP and the Board of Certified
 Psychometrists (BCP). These objectives will be met with an emphasis on relevancy
-to the discipline of psychometry.*
+to the discipline of psychometry. These objectives are written for an audience
+of psychometrist with at least an undergraduate degree containing at least one
+course on statistics and/or quantitative methods.*
 
 - Learn the general, basic differences between the frequentist and Bayesian
   frameworks for statistics
@@ -88,11 +140,184 @@ to the discipline of psychometry.*
 
 # Frequentist vs. Bayesian {#sec-frequentist-vs-bayesian}
 
+## Review of Frequentist Statistics {#sec-review-freq}
+
+{{< important "We are going to get deep in the theory here for just a moment,
+bear with me! We'll skip the truly theoretical and philosophical stuff - but
+this will feel the furthest from the work of psychometry." >}}
+
+- {{< glossary "Frequentist statistics" "A framework of statistics built on the
+  belief that probability is the occurrence of something happening in an
+  infinite number of trials" "false" >}} is a framework of statistics build on
+  the belief that {{< glossary "probability" "A description of how likely
+  something is to occur, defined differently under Frequentist and Bayesian
+  frameworks" "false" >}} is defined as long-run frequency, or relative
+  frequency over an infinite number of trials
+  - Simple example: if I were to flip a fair coin an infinite number of times,
+    it would land on head 50% of the time
+  - More complex example: if I were to gather an infinite number of samples from
+    a specified population of US people, the relativity frequency of them
+    having epilepsy would be 1.1% [@kobauActiveEpilepsyPrevalence2023]
+
+- Connection to statistics (as we are used to seeing)
+  - $p = 0.02$ ({{< glossary "p-value" "A value which describes the liklihood of
+    a result being due to random chance, if the null hypothesis is true" "false" >}}) in a comparison between group A and group B on scores on a standardized
+    test
+  - Frequentist interpretation: under the assumption that the null hypothesis is
+    true, there is a 2% chance of this difference having randomly occurred in an
+    infinite number of comparisons from these two populations
+  - Practical conclusion: if $\alpha = 0.05$, then we can provide evidence that
+    the null hypothesis that these two populations have the same test scores
+
+- Whether you remember it or not, this was almost certainly the way you learned
+  statistics the first time!
+
+## Introduction to Bayesian Statistics {#sec-intro-bayes}
+
+- {{< glossary "Bayesian statistics" "A framework of statistics built up the
+  belief that probability is the degree of belief of an event" "false" >}} is a
+  framework of statistics built up the belief that probability is the degree of
+  belief of an event
+  - Simple example: Initially, I think that the dice are fair, and there is a
+    1/6 chance of rolling a 6, however, after learning the dice are rigged, I
+    believe that the chance of rolling a 6 are 1/36.
+  - Complex example: Upon arriving at the clinic, I believe a person who is 71+
+    years old has a 13.9% chance of being diagnosed with dementia due to base
+    rates [@plassmanPrevalenceDementiaUnited2007]. However, after passing
+    several functional and memory measures I believe they only have a 4% chance
+    of being diagnosed with dementia
+
+- Bayesian statistics are rooted in use of {{< glossary "Bayes Theorem" "A
+  theorem that describes the Bayesian process of updating the degree of belief
+  based upon new information" "false" >}}, that describes the process
+  of updating the degree of belief based upon new information. It is:
+
+$$
+P(A | B) = \frac{P(B | A)*P(A)}{P(B)}
+$$
+
+- Where:
+  - $A$ and $B$ are both events; $B$ in particular can be thought of as "new
+    evidence"
+  - $P(A)$ is the probability of event $A$ occurring; also called the {{<
+    glossary "prior probability" "The degree of belief prior to receiving new
+    information" "false" >}}
+  - $P(B)$ is the probability of event $B$ occurring
+  - $P(A | B)$ is the probability of $A$, given $B$ is true; also called the {{<
+    glossary "posterior probability" "The degree of belief after receiving new
+    information" "false" >}}
+  - $P(B | A)$ is the probability of $A$, given $B$ is true; also called the {{<
+    glossary "likelihood function" "The likelihood of the evidence given the
+    prior information" "false" >}}
+
+- Effectively, Bayes Theorem is all about how we update our degree of belief in
+  $A$, given evidence $B$. This may be a brand new way to think about
+  probabilities for you!
+
+## How They Differ {#sec-differ-methods}
+
+- Frequentist statistics are rooted in describing long-run frequency and
+  probabilities of certain events occurring by considering an infinite number of
+  trials
+
+- Bayesian statistics are about modifying degree of belief in a certain outcome
+  given new information
+
+{{< important "While not mutually exclusive, it's important to realize that
+these define probability differently, and thus generate controversy on which is
+'right' ">}}
+
+- For a more robust description of the long-running debate, see
+  @bayarriInterplayBayesianFrequentist2004
+
 # Prevalent Use of Frequentist Statistics {#sec-frequentist-stats}
 
-# Neuropsychological Applications of the Bayesian Method {#sec-applications}
+## Examples of Frequentist Statistics {#sec-ex-freq}
 
-# Limitations of Bayesian Methods in the Clinic and Research {#sec-limitations}
+### In Concept {#sec-concept-freq}
+
+- {{< glossary "z-tests" "A parametric family of tests used to compare groups or
+  a group against a set standard when the parameters of the population are
+  known" "false" >}}, {{< glossary "t-tests" "A parametric family of tests used
+  to compare groups or a group against a set standard when the parameters of the
+  population are not known" "false" >}}, {{< glossary "ANOVA" "A parametric
+  family of tests used for analysis of variance among 3 or more groups on a
+  continuous variable" "false" >}} - any parametric model that produces a
+  p-value, as the p-value itself is a judgment of long-run frequency or
+  probability of the event being "real"
+
+- Due, to their {{< glossary "non-parametric" "A description of a certain
+  statistical test that does not rely on population parameters to inference,
+  sometimes for power benefit." "false" >}} nature, tests like $\chi^2$ don't
+  mesh as well with the definition of frequentist, but the production of the
+  p-value still means they do!
+
+### In Research {#sec-research-freq}
+
+{{< important "Pretty much published, empirical neuropsychology article will
+contain use of Frequentist tests! " >}}
+
+- To use some brief examples from recent NAP journal clubs:
+  - @whitakerAssessingLearningMemory2024 used several t-tests and chi-square
+    tests when determining if there were significant differences in brain cancer
+    patients on the CVLT-C and the ChAMP.
+  - @vyhnalekOlfactoryIdentificationAmnestic2015 used ANOVA, $\chi^2$ tests, and
+    linear regression to identify differences in Olfaction between several
+    different MCI groups
+
+- In both prior examples, the frequentist models were used to answer questions
+  about comparing groups to one another and the likelihood of them being as
+  different as they were, if the null was true.
+
+### In Clinic? {#sec-clinic-freq}
+
+- Frequentist methods usually require multi-person samples for analysis, so it's
+  use is limited at the single sample level
+
+- However, one use is in the generation of a p-value for a {{< glossary
+  "binomial distribution" "A special type of discrete numeric distribution with
+  fail/pass and subsequent independent trials" "false" >}} on forced choice
+  performance validity tests, like the VSVT [@reschVictoriaSymptomValidity2021]
+
+## Benefits of Frequentist Statistics {#sec-benefits-freq}
+
+- As the longstanding predominant statistical method for the last 100 years
+  [@efronBayesiansFrequentistsScientists2005], frequentist statistic enjoy wide
+  acceptance as suitable evidence for backing claims of impact and differences
+
+- These analyses provide concrete statements about the likelihood of a {{<
+  glossary "Type I error" "An error in frequentist hypothesis testing due to
+  rejecting the null hypothesis, when it is actual true" "false" >}} in judgment
+  occurring - in the form of the p-value
+
+- Practical in studying groups, and relatively simple to interpret and draw
+  conclusions from
+
+## Drawbacks of Frequentist Statistics {#sec-drawbacks-freq}
+
+- Limited usefulness in small-n sizes or single-case studies, such as when
+  analyzing a single patient in a clinical setting
+
+{{< important "While I am not out here to argue against the frequentist
+approach, this is one of the main areas where it fails to offer a practical use
+in clinical application!" >}}
+
+# Applications of the Bayesian Method {#sec-applications}
+
+## Examples of Bayesian Statistics {#sec-ex-bayes}
+
+### In Concept {#sec-concept-bayes}
+
+### In Research {#sec-research-bayes}
+
+### In Clinic {#sec-clinic-bayes}
+
+## Benefits of Bayesian Statistics {#sec-benefits-bayes}
+
+## Drawbacks of Bayesian Statistics {#sec-drawbacks-bayes}
+
+- Relatively difficult to interpret and explain, due to usually more complex,
+  computerized calculations and larger, more complicated mathematical formulas.
 
 # Conclusion {#sec-conclusion}
 
@@ -121,6 +346,9 @@ to the discipline of psychometry.*
 - While innovative, there are still many challenges in practically applying
   these ideas to the daily work of psychometrists
 
+{{< important "It is a fallacy to insist that one method is right or wrong over
+the other - but they do provide different sets of benefits and drawbacks!" >}}
+
 ## Contact Information {#sec-contact-info}
 
 Thank you for your attention today - I welcome you to stay in touch with me to
@@ -128,12 +356,14 @@ talk about this topic and other exciting neuropsychology!
 
 - Email: <Quinton.Quagliano@trinity-health.org>
 - [Find me on LinkedIn](https://www.linkedin.com/in/quintonquagliano)!
+- *If you wish to re-use or cite today's presentation, please follow all
+  customary rules on attribution to myself*
 
 Any Questions?
 
 ::: {.content-visible when-format="pdf"}
 
-# Technical Information {#sec-tech-info}
+# Additional Information {#sec-addt-info}
 
 ## System and Program Information {#sec-system-program-info}
 
@@ -196,7 +426,7 @@ touch if anything seems off.
 
 :::
 
-# References {#sec-refs}
+## References {#sec-refs}
 
 ::: {#refs}
 :::

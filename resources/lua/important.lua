@@ -5,7 +5,7 @@ return {
 		if quarto.doc.is_format("pdf") then
 			block = pandoc.RawBlock(
 				"tex",
-				"\\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, coltitle=black, opacityback=0, colframe=gvblue, leftrule=.75mm, bottomtitle=1mm, left=2mm, rightrule=.15mm, arc=.35mm, breakable, toprule=.15mm, bottomrule=.15mm, titlerule=0mm, title=\\textcolor{gvblue}{\\faExclamationCircle}\\hspace{0.5em}{Important}, toptitle=1mm, colback=white, colbacktitle=gvblue!10!white]"
+				"\\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, coltitle=black, opacityback=0, colframe=mypurple, leftrule=.75mm, bottomtitle=1mm, left=2mm, rightrule=.15mm, arc=.35mm, breakable, toprule=.15mm, bottomrule=.15mm, titlerule=0mm, title=\\textcolor{mypurple}{\\faExclamationCircle}\\hspace{0.5em}{Important}, toptitle=1mm, colback=white, colbacktitle=mypurple!10!white]"
 					.. text
 					.. "\\end{tcolorbox}\\vspace{3mm}"
 			)
