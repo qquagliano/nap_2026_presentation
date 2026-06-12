@@ -316,6 +316,9 @@ in clinical application!" >}}
 
 ## Drawbacks of Bayesian Statistics {#sec-drawbacks-bayes}
 
+- Not as widely known or supported by other scientists; less likely to be
+  accepted as analysis in papers and presentations
+
 - Relatively difficult to interpret and explain, due to usually more complex,
   computerized calculations and larger, more complicated mathematical formulas.
 
@@ -325,14 +328,19 @@ in clinical application!" >}}
 
 - Books
   - For a friendly and more basic introduction to the Bayesian Method
-    $\rightarrow$ *A Student's Guide to Bayesian Statistics* [@lambertStudentsGuideBayesian2018]
+    $\rightarrow$ *A Student's Guide to Bayesian Statistics*
+    [@lambertStudentsGuideBayesian2018]
   - For broad coverage of statistics topics leading up to Bayesian Methods
-    $\rightarrow$ *Statistical Rethinking, 2nd Edition* [@mcelreathStatisticalRethinkingBayesian2020]
+    $\rightarrow$ *Statistical Rethinking, 2nd Edition*
+    [@mcelreathStatisticalRethinkingBayesian2020]
   - For more focused applications of Bayesian Methods to psychology
-    $\rightarrow$
-    *Bayesian Statistics for the Social Sciences, 2nd Edition* [@kaplanBayesianStatisticsSocial2024]
+    $\rightarrow$ *Bayesian Statistics for the Social Sciences, 2nd Edition*
+    [@kaplanBayesianStatisticsSocial2024]
 - Review the [References] of this presentation for scientific articles that show
   these methods in action!
+- For more machine-learning examples, check out my [2025 NAP slides on
+  advancements in machine learning and AI in
+  Neuropsychology](https://qquagliano.github.io/nap_2025_presentation/presentation/presentation.html#/title-slide)
 
 ## Take-home Message {#sec-take-home}
 
