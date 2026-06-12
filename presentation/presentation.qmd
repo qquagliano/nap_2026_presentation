@@ -416,6 +416,15 @@ form of Bayesian methods!" >}}
 
 ### In Research {#sec-research-bayes}
 
+- Modeling declines in cognition and/or failures in thinking as a Bayesian
+  process with flawed evidence and prior [@parrComputationalNeuropsychologyBayesian2018]
+
+- In same vein as the last point, can we refine or challenge existing theories
+  by leveraging more computational methods [@schmerwitzFutureNeuropsychologyDigital2024]
+
+- Proposing a use for Bayesian models that can define "cutoffs" in number of
+  tests to define as abnormal or clinically concerning [@gavettValueBayesTheorem2015]
+
 ### In Clinic? {#sec-clinic-bayes}
 
 - @scandolaBayesianMultilevelSingle2021 and @crawfordComparisonSingleCase2007:
@@ -449,6 +458,9 @@ form of Bayesian methods!" >}}
   offer a more algorithmic approach to evidence integration than clinical
   judgment alone. Data driven and algorithmic medicine has become a very popular
   tool to increase efficiency and accuracy [@topolHighperformanceMedicineConvergence2019]
+
+{{< important "Data and analysis are not a replacement for the sound clinical
+judgement of a well-trained and licensed provider." >}}
 
 ## Drawbacks of Bayesian Statistics {#sec-drawbacks-bayes}
 
