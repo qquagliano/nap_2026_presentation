@@ -416,9 +416,21 @@ form of Bayesian methods!" >}}
 
 ### In Research {#sec-research-bayes}
 
-- @scandolaBayesianMultilevelSingle2021:
+### In Clinic? {#sec-clinic-bayes}
 
-### In Clinic {#sec-clinic-bayes}
+- @scandolaBayesianMultilevelSingle2021 and @crawfordComparisonSingleCase2007:
+  both focus on how to do robust comparison of a likely distribution of a person
+  with a normative distribution using Bayesian methods.
+  - This is similar to how we would use regular normative samples, but has the
+    added benefit of capturing the continued uncertainty in a distribution,
+    rather than a single point estimate with confidence intervals
+
+- Slow but steady growth in learning and adoption, in response to broader
+  concerns around the accuracy and stability of neuropsychological assessment [@huygelierValueBayesianMethods2022]
+
+- Emerging evidence that a well-made Bayesian analysis may provide more specific
+  and sensitive results that align well with classification of Alzheimer's
+  disease [@goetteValidationBayesianDiagnostic2023]
 
 ## Benefits of Bayesian Statistics {#sec-benefits-bayes}
 
@@ -427,7 +439,16 @@ form of Bayesian methods!" >}}
 
 - Integrates evidence while still maintaining healthy uncertainty about the
   range of outcomes; remember, there is a distribution of a random parameter,
-  not a fixed one
+  not a fixed one. Avoids providing a (seemingly) authoritative point estimate
+
+- Instead of starting at a *naive* point, like frequentist testing, Bayesian
+  testing leverages information about where a person's distribution may lie as
+  the prior
+
+- Can provide predictions of performance, much like a regression model. This may
+  offer a more algorithmic approach to evidence integration than clinical
+  judgment alone. Data driven and algorithmic medicine has become a very popular
+  tool to increase efficiency and accuracy [@topolHighperformanceMedicineConvergence2019]
 
 ## Drawbacks of Bayesian Statistics {#sec-drawbacks-bayes}
 
