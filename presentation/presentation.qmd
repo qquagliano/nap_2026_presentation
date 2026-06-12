@@ -2,7 +2,7 @@
 title: "An Introduction to Bayesian Methods in Neuropsychology for Psychometrists"
 subtitle: "National Association of Psychometrists 2026 Annual Meeting"
 author: "Quinton Quagliano, M.S., B.C.S.P."
-date: "2026-06-11"
+date: "2026-06-12"
 # SECTION: Bibliography opts
 bibliography: "./refs/complete.bib"
 cite-method: citeproc
@@ -223,6 +223,10 @@ $$
 - Bayesian statistics are about modifying degree of belief in a certain outcome
   given new information
 
+- Furthermore, Frequentist models assume fixed model parameters, while Bayesian
+  methods treat parameters as a distribution and random, reflecting our
+  uncertainty about the prior data
+
 {{< important "While not mutually exclusive, it's important to realize that
 these define probability differently, and thus generate controversy on which is
 'right' ">}}
@@ -298,6 +302,11 @@ contain use of Frequentist tests! " >}}
 - Limited usefulness in small-n sizes or single-case studies, such as when
   analyzing a single patient in a clinical setting
 
+- Continuing problems in p-value misinterpretation and misuse
+  [@lakensPracticalAlternativeValue2021]
+  - One proposed solution is lowering of the "standard" $\alpha$ value
+    [@ioannidisProposalLowerValue2018]
+
 {{< important "While I am not out here to argue against the frequentist
 approach, this is one of the main areas where it fails to offer a practical use
 in clinical application!" >}}
@@ -308,11 +317,33 @@ in clinical application!" >}}
 
 ### In Concept {#sec-concept-bayes}
 
+- The results of a Bayesian analysis are often presented as a set of
+  distributions, showing the prior and posterior distributions as being impacted
+  by the new evidence
+
+- The most common form of Bayesian-based analysis is rooted in use of something
+  called a Monte Carlo Markov Chain (MCMC) algorithm
+  - This is the analog to something like the ordinary least squares (OLS) method
+    or maximum likelihood method of obtaining estimates, but for Bayesian
+    analysis
+
+![](./imgs/ols.png)
+
+![](./imgs/hist_plots.png)
+
+{{< important "If you see any mention of MCMC, you are likely dealing with some
+form of Bayesian methods!" >}}
+
 ### In Research {#sec-research-bayes}
+
+- @scandolaBayesianMultilevelSingle2021:
 
 ### In Clinic {#sec-clinic-bayes}
 
 ## Benefits of Bayesian Statistics {#sec-benefits-bayes}
+
+- Still offer the ability to judge someone against a control (healthy) group,
+  much like
 
 ## Drawbacks of Bayesian Statistics {#sec-drawbacks-bayes}
 
@@ -321,6 +352,14 @@ in clinical application!" >}}
 
 - Relatively difficult to interpret and explain, due to usually more complex,
   computerized calculations and larger, more complicated mathematical formulas.
+
+- Implementation for clinical practice requires well-informed understanding of
+  Bayesian models, as selection of appropriate prior distribution is necessary
+  - This is similar to a process such as norms selection, e.g., Mitrushina vs.
+    Heaton
+
+- Results are not as clear-cut to describe (compared to frequentist results),
+  especially to non-scientific audiences
 
 # Conclusion {#sec-conclusion}
 
