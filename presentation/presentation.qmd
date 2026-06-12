@@ -131,12 +131,82 @@ course on statistics and/or quantitative methods.*
 - Empirical and evidence-driven nurse analogy
   - We owe it to our patients and clinics to be well-versed in empirical
     knowledge, even if not used daily
-- Improving our stature, variety, and skills
+- Improving our stature, variety, skills, and critical thinking
   - With an ever-evolving landscape involving digital testing, AI, and new
     technology, we must be mindful of how we can train ourselves up in new
     methods, many of which have roots in Bayesian statistics
 - Becoming skilled in statistics may offer an important avenue to future
   research and educational opportunities!
+
+# Illustrative Examples {#sec-illustrative-examples}
+
+## A Funky Plane Ride {#sec-funky-plane-ride}
+
+- Patrick is scheduled for a plane ride to go to his favorite conference in the
+  humid city of Baltimore. But he's a nervous flyer...
+
+- Patrick overthinks, and begins to wonder if he is at risk of a plane crash due
+  to weather conditions.
+  - 1 in 816,545,929 or 0.000001% chance of dying in a plane crash (The odds of
+    winning the Powerball Jackpot are 1 in 292,200,000)
+  - In the following scenario, raise your hand at which you think a plane crash
+    is more than 1% likely to happen
+
+1. Patrick hears there has been a last minute change in flight captain, to a
+   Capt. Tentacles
+2. Patrick hears that a flight at the gate next to him has been prevented from
+   landing due to poor weather conditions obstructing landing
+3. Patrick hears from his friend, Sandy, that severe thunderstorms are forming
+   in the path of his travel
+4. While boarding Patrick notices a sizable teams of mechanics and flight staff
+   looking up into the lower part of the plane, pointing, and arguing
+5. While in flight, the plane begins to not only experience major bumps and
+   drops, but also severe crosswinds
+6. As he grips his armrests, the person next to him, Sheldon (who is a flight
+   veteran of 15 years) says this is the worst turbulence he's ever experienced
+
+- What is the chance that, after all of this, Patrick's plane crashes?
+  - The thought process you employed in this exercise follows the logic of the
+    Bayesian model
+
+![](./imgs/486.jpg){.fragment}
+
+## A Questionable Patient {#sec-a-questionable-patient}
+
+{{< important "For this example, we are going to play armchair psychologist - do
+not speculate this in regular practice." >}}
+
+- Fran is a woman concerned for her memory, presenting to the neuropsychology
+  clinic for assessment. She is worried that she may be developing dementia.
+
+- When she comes in, her neuropsychologist, Dr. Sheffield considers the
+  possibilities and explains why they have to do some tests to get answers
+  - Based upon demographics and an informed guess Dr. Sheffield initially
+    believes there is a 10% chance of dementia in this patient. She hands off to
+    his psychometrist, Bryton, for cognitive testing
+  - In the following scenario, raise your hand at which you think there is a
+    greater than 30% chance that Fran will be diagnosed with dementia
+
+1. Fran misses 1 point on orientation questions, she's off by one on the date,
+   and says she doesn't pay attention because she is retired
+2. Bryton notices that he has to repeat himself often and asks if Fran wears hearing
+   aids, she says no, her hearing is fine, he just needs to be more clear when
+   he speaks
+3. Bryton records a score on the HVLT (a word memory test) that put's Fran's
+   delayed recall at 0% retention, and a exceptionally low standardized free
+   recall score.
+4. Bryton then administers TFLS (an ADLs/functional living test) and Fran, once
+   again, score exceptionally low in all domains. She becomes frustrated, asking
+   why she has to do these.
+5. Bryton has to switch out with Grace, his coworker, as he doesn't know how to
+   give one of the tests Dr. Sheffield has assigned. Grace administers a WMS-5
+   Logical Memory (a story memory test) and, once again, records an
+   exceptionally low standardized recall score.
+
+- If you didn't raise your hand, what other explanations might explain Fran's
+  condition?
+  - Again, with weighing this evidence, you employ a mindset in line with the
+    Bayesian model
 
 # Frequentist vs. Bayesian {#sec-frequentist-vs-bayesian}
 
@@ -213,6 +283,16 @@ $$
 - Effectively, Bayes Theorem is all about how we update our degree of belief in
   $A$, given evidence $B$. This may be a brand new way to think about
   probabilities for you!
+
+- From the [Illustrative Examples] earlier:
+  - Prior or $P(A)$ of 10% of dementia
+  - Additional pieces of evidence modifying that likelihood are $B$
+  - The "hand raise" benchmark of 30% was a description o $P(A | B)$, also know
+    as the posterior probability
+
+{{< important "Remember, this is a purposefully reductionist example, actual
+Bayesian results are not fixed percentages, they are distributions of different
+probabilities!" >}}
 
 ## How They Differ {#sec-differ-methods}
 
@@ -343,7 +423,11 @@ form of Bayesian methods!" >}}
 ## Benefits of Bayesian Statistics {#sec-benefits-bayes}
 
 - Still offer the ability to judge someone against a control (healthy) group,
-  much like
+  much like with regular, normative datasets
+
+- Integrates evidence while still maintaining healthy uncertainty about the
+  range of outcomes; remember, there is a distribution of a random parameter,
+  not a fixed one
 
 ## Drawbacks of Bayesian Statistics {#sec-drawbacks-bayes}
 
@@ -392,6 +476,8 @@ form of Bayesian methods!" >}}
   way to pursue new advances in research and clinical thinking
 - While innovative, there are still many challenges in practically applying
   these ideas to the daily work of psychometrists
+- Consider this: which perspective feels like a better way to represent
+  probability, to you?
 
 {{< important "It is a fallacy to insist that one method is right or wrong over
 the other - but they do provide different sets of benefits and drawbacks!" >}}
